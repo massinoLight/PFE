@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "627301329010",
+    "firebase_url": "https://pfeadelramzi.firebaseio.com",
+    "project_id": "pfeadelramzi",
+    "storage_bucket": "pfeadelramzi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:627301329010:android:0cc957410d333235757aeb",
+        "android_client_info": {
+          "package_name": "com.massino.pfeadelramzi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "627301329010-icidr0mijvbhcg3kuum8jo0hrp24eegs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.massino.pfeadelramzi",
+            "certificate_hash": "169bf65af905a05b529eea9b5b45bade962ec7e3"
+          }
+        },
+        {
+          "client_id": "627301329010-l5jf3so5b260vneo63tmf6ogeh1a367d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAp7YPWiZ9THwhZQ-Bnpcr-7hSzkuWLQWU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "627301329010-l5jf3so5b260vneo63tmf6ogeh1a367d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
