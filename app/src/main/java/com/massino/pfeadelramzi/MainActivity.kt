@@ -51,8 +51,8 @@ class MainActivity : AppCompatActivity() {
         // [START auth_fui_create_intent]
         // Choose authentication providers
         val providers = arrayListOf(
-            AuthUI.IdpConfig.EmailBuilder().build(),
-            AuthUI.IdpConfig.PhoneBuilder().build(),
+            //AuthUI.IdpConfig.EmailBuilder().build(),
+            //AuthUI.IdpConfig.PhoneBuilder().build(),
             AuthUI.IdpConfig.GoogleBuilder().build(),
             AuthUI.IdpConfig.FacebookBuilder().build())
 

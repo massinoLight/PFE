@@ -1,5 +1,9 @@
 package com.massino.pfeadelramzi
 
+
+import androidx.navigation.ui.navigateUp
+import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
 import android.content.ContentValues
 import android.content.Intent
 import android.graphics.Bitmap
@@ -20,15 +24,16 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
 import com.firebase.ui.auth.AuthUI
+import com.firebase.ui.auth.ui.email.CheckEmailFragment.newInstance
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
+import com.massino.pfeadelramzi.ui.home.HomeFragment
 import kotlinx.android.synthetic.main.activity_main.*
+import java.lang.reflect.Array.newInstance
 import java.net.URL
+import javax.xml.xpath.XPathFactory.newInstance
 
 class MenuPrincipal : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener  {
 
