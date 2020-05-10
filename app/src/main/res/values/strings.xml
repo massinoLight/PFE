@@ -10,8 +10,13 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
-
     <string name="home_second">Home Second</string>
+
+    <string name="menu_localisation">Nous trouver</string>
+    <string name="menu_catalogue">Catalogue</string>
+    <string name="menu_panier">Panier</string>
+    <string name="menu_contact">Nous Contacter</string>
+    <string name="menu_rite">Nous Noter</string>
 
 
     <!-- Facebook application ID and custom URL scheme (app ID prefixed by 'fb'). -->

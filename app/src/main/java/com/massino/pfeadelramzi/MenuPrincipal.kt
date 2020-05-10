@@ -30,7 +30,9 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
 import com.massino.pfeadelramzi.ui.home.HomeFragment
+import de.hdodenhof.circleimageview.CircleImageView
 import kotlinx.android.synthetic.main.activity_main.*
+import org.jetbrains.anko.toast
 import java.lang.reflect.Array.newInstance
 import java.net.URL
 import javax.xml.xpath.XPathFactory.newInstance
@@ -64,8 +66,8 @@ class MenuPrincipal : AppCompatActivity(), NavigationView.OnNavigationItemSelect
         /**
          * le bouton déconnéction
          * */
-        val out: Button = findViewById(R.id.logout)
-        out.setOnClickListener { view ->
+        val logout: Button = findViewById(R.id.logout)
+        logout.setOnClickListener { view ->
             AuthUI.getInstance()
                 .signOut(this)
                 .addOnCompleteListener {
@@ -84,7 +86,11 @@ class MenuPrincipal : AppCompatActivity(), NavigationView.OnNavigationItemSelect
         val headerView: View =navView.getHeaderView(0)
         val textViewNom: TextView = headerView.findViewById(R.id.nom)
         val textViewEmail: TextView = headerView.findViewById(R.id.email)
-        val photoDeProfil: ImageView =headerView.findViewById(R.id.photo)
+        val photoDeProfil:CircleImageView = headerView.findViewById(R.id.photo)
+        //donner la possibilité a l'utiisateur de changer sa photo de profil
+       /* photoDeProfil.setOnClickListener {
+            toast("le click marche")
+        }*/
         RecuperationImage(photoDeProfil)
             .execute(urlphoto)
         textViewNom.text=nomRe
@@ -184,8 +190,8 @@ class MenuPrincipal : AppCompatActivity(), NavigationView.OnNavigationItemSelect
 
     inner class RecuperationImage() : AsyncTask<String, Void, Bitmap?>() {
 
-        lateinit var bmImg: ImageView
-        constructor (bImage: ImageView) : this() {
+        lateinit var bmImg: CircleImageView
+        constructor (bImage: CircleImageView) : this() {
             bmImg = bImage
         }
 
