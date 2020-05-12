@@ -140,26 +140,26 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback,GoogleApiClient.Con
 
         options.title("Principal")
         options.snippet("snippet")
-        options.icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_svg))
+        options.icon(BitmapDescriptorFactory.fromResource(R.drawable.logomap))
         options.position(targa)
 
 
 
         options3.title("Magazin 1")
         options3.snippet("Cité Mangin")
-        options3.icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_svg))
+        options3.icon(BitmapDescriptorFactory.fromResource(R.drawable.logomap))
         options3.position(citemangin)
 
 
         options2.title("Magazin 2")
         options2.snippet("Cité Remla")
-        options2.icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_svg))
+        options2.icon(BitmapDescriptorFactory.fromResource(R.drawable.logomap))
         options2.position(remla)
 
 
         options1.title("Magazin 3")
         options1.snippet("Cité Tobale")
-        options1.icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_svg))
+        options1.icon(BitmapDescriptorFactory.fromResource(R.drawable.logomap))
         options1.position(tobale)
 
 

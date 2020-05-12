@@ -37,7 +37,7 @@ import java.lang.reflect.Array.newInstance
 import java.net.URL
 import javax.xml.xpath.XPathFactory.newInstance
 
-class MenuPrincipal : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener  {
+class MenuPrincipal : AppCompatActivity(){//, NavigationView.OnNavigationItemSelectedListener  {
 
 
     var IMAGE: Bitmap? = null
@@ -102,7 +102,7 @@ class MenuPrincipal : AppCompatActivity(), NavigationView.OnNavigationItemSelect
             R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow), drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
-        nav_view.setNavigationItemSelectedListener(this)
+        //nav_view.setNavigationItemSelectedListener(this)
     }
 
 
@@ -141,7 +141,7 @@ class MenuPrincipal : AppCompatActivity(), NavigationView.OnNavigationItemSelect
      * lorsque l’utilisateur sélectionne un item dans
      * le menu de navigation.
      * **/
-    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+    /*override fun onNavigationItemSelected(item: MenuItem): Boolean {
         // Handle navigation view item clicks here.
         Log.e(ContentValues.TAG, "onNavigationItemSelected est invoqué ")
 
@@ -170,7 +170,7 @@ class MenuPrincipal : AppCompatActivity(), NavigationView.OnNavigationItemSelect
             .replace(R.id.nav_host_fragment, fragment, "")
             .commit()
         return true
-    }
+    }*/
 
     /**
      * permet d’associer le bouton back du téléphone à un événement de
@@ -230,5 +230,7 @@ class MenuPrincipal : AppCompatActivity(), NavigationView.OnNavigationItemSelect
             false
         )
     }
+
+
 
 }

@@ -7,10 +7,13 @@
     tools:context=".ui.slideshow.SlideshowFragment"
     android:background="@drawable/custom_menu_backg">
 
-    <TextView
-        android:id="@+id/text_slideshow"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+    <ImageView
+        android:id="@+id/map"
+        android:layout_width="195dp"
+        android:layout_height="167dp"
+        android:src="@mipmap/carte_foreground"
+        tools:layout_editor_absoluteX="126dp"
+        tools:layout_editor_absoluteY="404dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -20,4 +23,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
