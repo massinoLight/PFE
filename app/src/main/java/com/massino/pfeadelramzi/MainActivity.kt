@@ -18,6 +18,8 @@ import androidx.appcompat.widget.Toolbar
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.IdpResponse
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_menu_principal.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 import org.jetbrains.anko.toast
@@ -30,6 +32,7 @@ class MainActivity : AppCompatActivity() {
         const val EXTRA_EMAIL = "user.email"
         const val EXTRA_NOM = "user.nom"
         const val EXTRA_PHOTO="user.photo"
+        val db = Firebase.firestore
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
