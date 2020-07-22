@@ -1,0 +1,26 @@
+ALO ALO ALO adel m'a dit fait juste les interfaces pour que tu les programmes, j'ai essayé de programmer kra en commentaires faut les verifier 
+stp dis moi direct à moi sans passer par adel ce qu'il faut faire jle fais je suis dispo et y'a des trucs jme debrouille chwiya
+
+
+** ajouter l'attribus val admin:bool dans la classe utilisateur.kt     j'ai pas su comment faire dayi genre un attribus tjrs false pour tout les comptes ajouter apart les 3 admins 
+
+** ajouter 3 mails dans la BDD Firebase avec l'attribus    val admin = true     massino // ramziomari1995@gmail.com // adel
+
+** se connecter : si l'utilisateur a admin = True >>> il envoie vers l'interface du gerant (MenuPrincipalGerant)
+					sinon >>> vers l'interface de l'utilisateur (MenuPrincipal) qui est deja programmée
+					
+	j'ai fais des commentaires pour cette condition dans MainActivity.kt faut les verifier s'ils sont bons
+
+
+
+** l'interface et la classe (activity_) MenuPrincipalGerant.kt   y'a deux boutons :
+	
+		buAjouter vers la classe et interface AjouterMeuble où y'a 3 EditText et un bouton
+		buCritiques vers la classe Critiques >>>  ça j'ai pas compris ce qu'il voulait faire
+		
+		
+
+
+du coup voilà contacte moi 
+ 
+

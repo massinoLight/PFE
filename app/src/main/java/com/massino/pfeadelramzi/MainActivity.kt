@@ -79,6 +79,10 @@ class MainActivity : AppCompatActivity() {
             if (resultCode == Activity.RESULT_OK) {
                 // Successfully signed in
                 val user = FirebaseAuth.getInstance().currentUser
+
+                /*         RAMZI ---
+                if (user.admin=false) {
+                // envoyer vers l'interface client >> Menu Principal          */
                 if (user != null) {
                     val intent2 = Intent(this, MenuPrincipal::class.java)
                     intent2.putExtra(EXTRA_EMAIL, user.email)
@@ -89,6 +93,22 @@ class MainActivity : AppCompatActivity() {
                 }else {
                     toast("utilisateur introuvable")
                 }
+
+                /* RAMZI ---
+                  }else{
+
+                  // si Admin = true il envoie vers l'interface Gerant >> MenuPrincipalAdmin
+                 if (user != null) {
+                    val intent3 = Intent(this, MenuPrincipalAdmin::class.java)
+                    intent2.putExtra(EXTRA_EMAIL, user.email)
+                    intent2.putExtra(EXTRA_NOM, user.displayName)
+                    intent2.putExtra(EXTRA_PHOTO,user.photoUrl.toString())
+                    startActivity(intent3)
+                    finish()
+                }else {
+                    toast("utilisateur introuvable")
+                }
+                 */
 
             } else {
                 // Sign in failed. If response is null the user canceled the

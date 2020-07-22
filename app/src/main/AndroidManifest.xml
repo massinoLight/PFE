@@ -23,7 +23,10 @@
         android:roundIcon="@mipmap/ic_logo_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SceneformeActivity"></activity>
+        <activity android:name=".Critiques"></activity>
+        <activity android:name=".AjouterMeubles" />
+        <activity android:name=".MenuPrincipalGerant" />
+        <activity android:name=".SceneformeActivity" />
         <activity android:name=".ListeMeuble3DActivity" />
         <activity android:name=".MapsActivity" />
         <activity android:name=".MenuPrincipal" />

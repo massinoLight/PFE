@@ -36,13 +36,15 @@ class ListeMeuble3DActivity : AppCompatActivity() {
         //mon_recycler.adapter?.notifyItemInserted(0)
             list.add(meuble2)
        // mon_recycler.adapter?.notifyItemInserted(0)
-        list.add(meuble)
+
+        // redondance ?
+        /*list.add(meuble)
         list.add(meuble1)
         list.add(meuble2)
 
         list.add(meuble)
         list.add(meuble1)
-        list.add(meuble2)
+        list.add(meuble2)*/
 
 
 
