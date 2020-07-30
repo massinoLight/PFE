@@ -27,8 +27,8 @@ class ListeMeuble3DActivity : AppCompatActivity() {
     private fun generateList(): MutableList<Meuble>{
 
         val list = ArrayList<Meuble>()
-            val meuble = Meuble(R.drawable.fauteilgris, "Gris","25000da",1)
-            val meuble1 = Meuble(R.drawable.fauteuille1, "","1000d&",1)
+            val meuble = Meuble(R.drawable.fauteilgris, "Fauteuil gris","25000da",1)
+            val meuble1 = Meuble(R.drawable.fauteuille1, "Fauteuil2","1000d&",1)
             val meuble2 = Meuble(R.drawable.burau, "Bureau","25000da",1)
             list.add(meuble)
         //mon_recycler.adapter?.notifyItemInserted(0)
@@ -36,17 +36,6 @@ class ListeMeuble3DActivity : AppCompatActivity() {
         //mon_recycler.adapter?.notifyItemInserted(0)
             list.add(meuble2)
        // mon_recycler.adapter?.notifyItemInserted(0)
-
-        // redondance ?
-        /*list.add(meuble)
-        list.add(meuble1)
-        list.add(meuble2)
-
-        list.add(meuble)
-        list.add(meuble1)
-        list.add(meuble2)*/
-
-
 
         return list
     }
@@ -60,7 +49,8 @@ class ListeMeuble3DActivity : AppCompatActivity() {
         {
 
             val intent3 = Intent(this, SceneformeActivity::class.java)
-            intent3.putExtra("image_url",1)
+            // j'ai envoyé "nom" parceque avant il envoyait à chaque fois la valeur 1 et jamais la vrai position du click il faut implimenter une interface dans l'adapter et changer bcp de chose pour utiliser position...
+            intent3.putExtra("image_url",it.nom)
             startActivity(intent3)
 
 

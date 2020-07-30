@@ -169,11 +169,12 @@ public class SceneformeActivity extends AppCompatActivity {
          return imageUrl;
     }*/
     private void initializeGallery() {
-        int imageUrl = getIntent().getIntExtra("image_url",0);
+       // int imageUrl = getIntent().getIntExtra("image_url",0);
+        String imageUrl=getIntent().getStringExtra("image_url");
         LinearLayout gallery = findViewById(R.id.gallery_layout);
-        int obj =imageUrl;
+        String obj =imageUrl;
         switch (obj) {
-            case 0: {
+            case "Fauteuil gris": {
                 ImageView andy = new ImageView(this);
                 andy.setImageResource(R.drawable.fauteilgris);
                 andy.setContentDescription("fauteuil Créme");
@@ -182,7 +183,7 @@ public class SceneformeActivity extends AppCompatActivity {
 
             }
             break;
-            case 1: {
+            case "Banc": {
                 ImageView andy = new ImageView(this);
                 andy.setImageResource(R.drawable.banc);
                 andy.setContentDescription("banc extérieur");
@@ -191,7 +192,7 @@ public class SceneformeActivity extends AppCompatActivity {
 
             }
             break;
-            case 2 : {
+            case "Bureau": {
                 ImageView andy = new ImageView(this);
                 andy.setImageResource(R.drawable.burau);
                 andy.setContentDescription("bureau");
@@ -200,7 +201,7 @@ public class SceneformeActivity extends AppCompatActivity {
 
             }
             break;
-            case 3 : {
+            case "Fauteuil1" : {
                 ImageView andy = new ImageView(this);
                 andy.setImageResource(R.drawable.fauteuille3);
                 andy.setContentDescription("Fauteuil une place");
@@ -208,7 +209,7 @@ public class SceneformeActivity extends AppCompatActivity {
                 gallery.addView(andy);
 
             }
-            case 4 : {
+            case "Fauteuil2" : {
                 ImageView andy = new ImageView(this);
                 andy.setImageResource(R.drawable.fauteuille1);
                 andy.setContentDescription("Fauteuil bleu");
@@ -217,7 +218,7 @@ public class SceneformeActivity extends AppCompatActivity {
 
             }
             break;
-            case 5 : {
+            case "Table" : {
                 ImageView andy = new ImageView(this);
                 andy.setImageResource(R.drawable.table);
                 andy.setContentDescription("Table extérieur");
@@ -226,7 +227,7 @@ public class SceneformeActivity extends AppCompatActivity {
 
             }
             break;
-            case 6 : {
+            case "Thor" : {
                 ImageView andy = new ImageView(this);
                 andy.setImageResource(R.drawable.thor);
                 andy.setContentDescription("Thor");
