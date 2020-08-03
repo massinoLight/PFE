@@ -27,15 +27,37 @@ class ListeMeuble3DActivity : AppCompatActivity() {
     private fun generateList(): MutableList<Meuble>{
 
         val list = ArrayList<Meuble>()
-            val meuble = Meuble(R.drawable.fauteilgris, "Fauteuil gris","25000da",1)
-            val meuble1 = Meuble(R.drawable.fauteuille1, "Fauteuil2","1000d&",1)
-            val meuble2 = Meuble(R.drawable.burau, "Bureau","25000da",1)
+            val meuble = Meuble(R.drawable.fauteilgris, "foteuil","25000da",1)
+            val meuble1 = Meuble(R.drawable.fauteuille1, "ff","1000da",1)
+            val meuble2 = Meuble(R.drawable.burau, "bureau","25000da",1)
             list.add(meuble)
         //mon_recycler.adapter?.notifyItemInserted(0)
             list.add(meuble1)
         //mon_recycler.adapter?.notifyItemInserted(0)
             list.add(meuble2)
        // mon_recycler.adapter?.notifyItemInserted(0)
+        val meuble3 = Meuble(R.drawable.banc, "Bench","25000da",1)
+        list.add(meuble3)
+        val meuble4 = Meuble(R.drawable.table, "table","25000da",1)
+        list.add(meuble4)
+        val meuble5 = Meuble(R.drawable.thor, "thor","25000da",1)
+        list.add(meuble5)
+        val meuble6 = Meuble(R.drawable.fauteuille2, "foteuil2","25000da",1)
+        list.add(meuble6)
+        val meuble7 = Meuble(R.drawable.fauteuille3, "fotUnePlace","25000da",1)
+        list.add(meuble7)
+        val meuble8 = Meuble(R.drawable.fautrouge, "new2","25000da",1)
+        list.add(meuble8)
+        val meuble9 = Meuble(R.drawable.armoiremoderne, "new3","25000da",1)
+        list.add(meuble9)
+        val meuble10= Meuble(R.drawable.lampe, "deco","25000da",1)
+        list.add(meuble10)
+        val meuble11= Meuble(R.drawable.tabledenuit, "decos","25000da",1)
+        list.add(meuble11)
+        val meuble12 = Meuble(R.drawable.tableverre, "new1","25000da",1)
+        list.add(meuble12)
+
+        // j'ai ajouté au hasard ken le tout pour essayer si un des models marche
 
         return list
     }

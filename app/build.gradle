@@ -87,6 +87,73 @@ dependencies {
 
     // Alternatively, use ArSceneView without the UX dependency.
     implementation 'com.google.ar.sceneform:core:1.15.0'
+    apply plugin: 'com.google.ar.sceneform.plugin'
+
+    // j'ai cru que c'était là le probleme vu les bug de sceneform mais rien :/
+    sceneform.asset('sampledata/model/Bench.fbx',
+            'default',
+            'sampledata/model/Bench.sfa',
+            'src/main/assets/Bench')
+
+    sceneform.asset('sampledata/model/bureau.fbx',
+            'default',
+            'sampledata/model/bureau.sfa',
+            'src/main/assets/bureau')
+
+    sceneform.asset('sampledata/model/deco.fbx',
+            'default',
+            'sampledata/model/deco.sfa',
+            'src/main/assets/deco')
+
+    sceneform.asset('sampledata/model/decos.fbx',
+            'default',
+            'sampledata/model/decos.sfa',
+            'src/main/assets/decos')
+
+    sceneform.asset('sampledata/model/ff.fbx',
+            'default',
+            'sampledata/model/ff.sfa',
+            'src/main/assets/ff')
+
+    sceneform.asset('sampledata/model/foteuil.fbx',
+            'default',
+            'sampledata/model/foteuil.sfa',
+            'src/main/assets/foteuil')
+
+    sceneform.asset('sampledata/model/foteuil2.fbx',
+            'default',
+            'sampledata/model/foteuil2.sfa',
+            'src/main/assets/foteuil2')
+
+    sceneform.asset('sampledata/model/fotUnePlace.fbx',
+            'default',
+            'sampledata/model/fotUnePlace.sfa',
+            'src/main/assets/fotUnePlace')
+
+    sceneform.asset('sampledata/model/new1.fbx',
+            'default',
+            'sampledata/model/new1.sfa',
+            'src/main/assets/new1')
+
+    sceneform.asset('sampledata/model/new2.fbx',
+            'default',
+            'sampledata/model/new2.sfa',
+            'src/main/assets/new2')
+
+    sceneform.asset('sampledata/model/new3.fbx',
+            'default',
+            'sampledata/model/new3.sfa',
+            'src/main/assets/new3')
+
+    sceneform.asset('sampledata/model/table.fbx',
+            'default',
+            'sampledata/model/table.sfa',
+            'src/main/assets/table')
+
+    sceneform.asset('sampledata/model/thor.fbx',
+            'default',
+            'sampledata/model/thor.sfa',
+            'src/main/assets/thor')
 
 
 }

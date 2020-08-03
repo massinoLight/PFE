@@ -1,0 +1,491 @@
+{
+  animations: [
+    {
+      clips: [
+        {
+          name: 'Camera001.Target|ArnoldLight001.Target|Take 001|BaseLayer',
+        },
+        {
+          name: 'Camera001.Target|ArnoldLight001|Take 001|BaseLayer',
+        },
+        {
+          name: 'Camera001.Target|ArnoldLight002|Take 001|BaseLayer',
+        },
+        {
+          name: 'Camera001.Target|Box002|Take 001|BaseLayer',
+        },
+        {
+          name: 'Camera001.Target|Camera001.Target|Take 001|BaseLayer',
+        },
+        {
+          name: 'Camera001.Target|Camera001|Take 001|BaseLayer',
+        },
+        {
+          name: 'Camera001.Target|Line001|Take 001|BaseLayer',
+        },
+        {
+          name: 'Camera001.Target|Line002|Take 001|BaseLayer',
+        },
+        {
+          name: 'Camera001.Target|Line003|Take 001|BaseLayer',
+        },
+        {
+          name: 'Camera001.Target|Line004|Take 001|BaseLayer',
+        },
+        {
+          name: 'Camera001.Target|Line005|Take 001|BaseLayer',
+        },
+        {
+          name: 'Camera001.Target|Plane001|Take 001|BaseLayer',
+        },
+        {
+          name: 'Camera001.Target|Rectangle001|Take 001|BaseLayer',
+        },
+        {
+          name: 'Camera001|ArnoldLight001.Target|Take 001|BaseLayer',
+        },
+        {
+          name: 'Camera001|ArnoldLight001|Take 001|BaseLayer',
+        },
+        {
+          name: 'Camera001|ArnoldLight002|Take 001|BaseLayer',
+        },
+        {
+          name: 'Camera001|Box002|Take 001|BaseLayer',
+        },
+        {
+          name: 'Camera001|Camera001.Target|Take 001|BaseLayer',
+        },
+        {
+          name: 'Camera001|Camera001|Take 001|BaseLayer',
+        },
+        {
+          name: 'Camera001|Line001|Take 001|BaseLayer',
+        },
+        {
+          name: 'Camera001|Line002|Take 001|BaseLayer',
+        },
+        {
+          name: 'Camera001|Line003|Take 001|BaseLayer',
+        },
+        {
+          name: 'Camera001|Line004|Take 001|BaseLayer',
+        },
+        {
+          name: 'Camera001|Line005|Take 001|BaseLayer',
+        },
+        {
+          name: 'Camera001|Plane001|Take 001|BaseLayer',
+        },
+        {
+          name: 'Camera001|Rectangle001|Take 001|BaseLayer',
+        },
+        {
+          name: 'ArnoldLight002|ArnoldLight001.Target|Take 001|BaseLayer',
+        },
+        {
+          name: 'ArnoldLight002|ArnoldLight001|Take 001|BaseLayer',
+        },
+        {
+          name: 'ArnoldLight002|ArnoldLight002|Take 001|BaseLayer',
+        },
+        {
+          name: 'ArnoldLight002|Box002|Take 001|BaseLayer',
+        },
+        {
+          name: 'ArnoldLight002|Camera001.Target|Take 001|BaseLayer',
+        },
+        {
+          name: 'ArnoldLight002|Camera001|Take 001|BaseLayer',
+        },
+        {
+          name: 'ArnoldLight002|Line001|Take 001|BaseLayer',
+        },
+        {
+          name: 'ArnoldLight002|Line002|Take 001|BaseLayer',
+        },
+        {
+          name: 'ArnoldLight002|Line003|Take 001|BaseLayer',
+        },
+        {
+          name: 'ArnoldLight002|Line004|Take 001|BaseLayer',
+        },
+        {
+          name: 'ArnoldLight002|Line005|Take 001|BaseLayer',
+        },
+        {
+          name: 'ArnoldLight002|Plane001|Take 001|BaseLayer',
+        },
+        {
+          name: 'ArnoldLight002|Rectangle001|Take 001|BaseLayer',
+        },
+        {
+          name: 'ArnoldLight001.Target|ArnoldLight001.Target|Take 001|BaseLayer',
+        },
+        {
+          name: 'ArnoldLight001.Target|ArnoldLight001|Take 001|BaseLayer',
+        },
+        {
+          name: 'ArnoldLight001.Target|ArnoldLight002|Take 001|BaseLayer',
+        },
+        {
+          name: 'ArnoldLight001.Target|Box002|Take 001|BaseLayer',
+        },
+        {
+          name: 'ArnoldLight001.Target|Camera001.Target|Take 001|BaseLayer',
+        },
+        {
+          name: 'ArnoldLight001.Target|Camera001|Take 001|BaseLayer',
+        },
+        {
+          name: 'ArnoldLight001.Target|Line001|Take 001|BaseLayer',
+        },
+        {
+          name: 'ArnoldLight001.Target|Line002|Take 001|BaseLayer',
+        },
+        {
+          name: 'ArnoldLight001.Target|Line003|Take 001|BaseLayer',
+        },
+        {
+          name: 'ArnoldLight001.Target|Line004|Take 001|BaseLayer',
+        },
+        {
+          name: 'ArnoldLight001.Target|Line005|Take 001|BaseLayer',
+        },
+        {
+          name: 'ArnoldLight001.Target|Plane001|Take 001|BaseLayer',
+        },
+        {
+          name: 'ArnoldLight001.Target|Rectangle001|Take 001|BaseLayer',
+        },
+        {
+          name: 'ArnoldLight001|ArnoldLight001.Target|Take 001|BaseLayer',
+        },
+        {
+          name: 'ArnoldLight001|ArnoldLight001|Take 001|BaseLayer',
+        },
+        {
+          name: 'ArnoldLight001|ArnoldLight002|Take 001|BaseLayer',
+        },
+        {
+          name: 'ArnoldLight001|Box002|Take 001|BaseLayer',
+        },
+        {
+          name: 'ArnoldLight001|Camera001.Target|Take 001|BaseLayer',
+        },
+        {
+          name: 'ArnoldLight001|Camera001|Take 001|BaseLayer',
+        },
+        {
+          name: 'ArnoldLight001|Line001|Take 001|BaseLayer',
+        },
+        {
+          name: 'ArnoldLight001|Line002|Take 001|BaseLayer',
+        },
+        {
+          name: 'ArnoldLight001|Line003|Take 001|BaseLayer',
+        },
+        {
+          name: 'ArnoldLight001|Line004|Take 001|BaseLayer',
+        },
+        {
+          name: 'ArnoldLight001|Line005|Take 001|BaseLayer',
+        },
+        {
+          name: 'ArnoldLight001|Plane001|Take 001|BaseLayer',
+        },
+        {
+          name: 'ArnoldLight001|Rectangle001|Take 001|BaseLayer',
+        },
+        {
+          name: 'Box002|ArnoldLight001.Target|Take 001|BaseLayer',
+        },
+        {
+          name: 'Box002|ArnoldLight001|Take 001|BaseLayer',
+        },
+        {
+          name: 'Box002|ArnoldLight002|Take 001|BaseLayer',
+        },
+        {
+          name: 'Box002|Box002|Take 001|BaseLayer',
+        },
+        {
+          name: 'Box002|Camera001.Target|Take 001|BaseLayer',
+        },
+        {
+          name: 'Box002|Camera001|Take 001|BaseLayer',
+        },
+        {
+          name: 'Box002|Line001|Take 001|BaseLayer',
+        },
+        {
+          name: 'Box002|Line002|Take 001|BaseLayer',
+        },
+        {
+          name: 'Box002|Line003|Take 001|BaseLayer',
+        },
+        {
+          name: 'Box002|Line004|Take 001|BaseLayer',
+        },
+        {
+          name: 'Box002|Line005|Take 001|BaseLayer',
+        },
+        {
+          name: 'Box002|Plane001|Take 001|BaseLayer',
+        },
+        {
+          name: 'Box002|Rectangle001|Take 001|BaseLayer',
+        },
+        {
+          name: 'Rectangle001|ArnoldLight001.Target|Take 001|BaseLayer',
+        },
+        {
+          name: 'Rectangle001|ArnoldLight001|Take 001|BaseLayer',
+        },
+        {
+          name: 'Rectangle001|ArnoldLight002|Take 001|BaseLayer',
+        },
+        {
+          name: 'Rectangle001|Box002|Take 001|BaseLayer',
+        },
+        {
+          name: 'Rectangle001|Camera001.Target|Take 001|BaseLayer',
+        },
+        {
+          name: 'Rectangle001|Camera001|Take 001|BaseLayer',
+        },
+        {
+          name: 'Rectangle001|Line001|Take 001|BaseLayer',
+        },
+        {
+          name: 'Rectangle001|Line002|Take 001|BaseLayer',
+        },
+        {
+          name: 'Rectangle001|Line003|Take 001|BaseLayer',
+        },
+        {
+          name: 'Rectangle001|Line004|Take 001|BaseLayer',
+        },
+        {
+          name: 'Rectangle001|Line005|Take 001|BaseLayer',
+        },
+        {
+          name: 'Rectangle001|Plane001|Take 001|BaseLayer',
+        },
+        {
+          name: 'Rectangle001|Rectangle001|Take 001|BaseLayer',
+        },
+        {
+          name: 'Line004|ArnoldLight001.Target|Take 001|BaseLayer',
+        },
+        {
+          name: 'Line004|ArnoldLight001|Take 001|BaseLayer',
+        },
+        {
+          name: 'Line004|ArnoldLight002|Take 001|BaseLayer',
+        },
+        {
+          name: 'Line004|Box002|Take 001|BaseLayer',
+        },
+        {
+          name: 'Line004|Camera001.Target|Take 001|BaseLayer',
+        },
+        {
+          name: 'Line004|Camera001|Take 001|BaseLayer',
+        },
+        {
+          name: 'Line004|Line001|Take 001|BaseLayer',
+        },
+        {
+          name: 'Line004|Line002|Take 001|BaseLayer',
+        },
+        {
+          name: 'Line004|Line003|Take 001|BaseLayer',
+        },
+        {
+          name: 'Line004|Line004|Take 001|BaseLayer',
+        },
+        {
+          name: 'Line004|Line005|Take 001|BaseLayer',
+        },
+        {
+          name: 'Line004|Plane001|Take 001|BaseLayer',
+        },
+        {
+          name: 'Line004|Rectangle001|Take 001|BaseLayer',
+        },
+        {
+          name: 'Line003|ArnoldLight001.Target|Take 001|BaseLayer',
+        },
+        {
+          name: 'Line003|ArnoldLight001|Take 001|BaseLayer',
+        },
+        {
+          name: 'Line003|ArnoldLight002|Take 001|BaseLayer',
+        },
+        {
+          name: 'Line003|Box002|Take 001|BaseLayer',
+        },
+        {
+          name: 'Line003|Camera001.Target|Take 001|BaseLayer',
+        },
+        {
+          name: 'Line003|Camera001|Take 001|BaseLayer',
+        },
+        {
+          name: 'Line003|Line001|Take 001|BaseLayer',
+        },
+        {
+          name: 'Line003|Line002|Take 001|BaseLayer',
+        },
+        {
+          name: 'Line003|Line003|Take 001|BaseLayer',
+        },
+        {
+          name: 'Line003|Line004|Take 001|BaseLayer',
+        },
+        {
+          name: 'Line003|Line005|Take 001|BaseLayer',
+        },
+        {
+          name: 'Line003|Plane001|Take 001|BaseLayer',
+        },
+        {
+          name: 'Line003|Rectangle001|Take 001|BaseLayer',
+        },
+        {
+          name: 'Line002|ArnoldLight001.Target|Take 001|BaseLayer',
+        },
+        {
+          name: 'Line002|ArnoldLight001|Take 001|BaseLayer',
+        },
+        {
+          name: 'Line002|ArnoldLight002|Take 001|BaseLayer',
+        },
+        {
+          name: 'Line002|Box002|Take 001|BaseLayer',
+        },
+        {
+          name: 'Line002|Camera001.Target|Take 001|BaseLayer',
+        },
+        {
+          name: 'Line002|Camera001|Take 001|BaseLayer',
+        },
+        {
+          name: 'Line002|Line001|Take 001|BaseLayer',
+        },
+        {
+          name: 'Line002|Line002|Take 001|BaseLayer',
+        },
+        {
+          name: 'Line002|Line003|Take 001|BaseLayer',
+        },
+        {
+          name: 'Line002|Line004|Take 001|BaseLayer',
+        },
+        {
+          name: 'Line002|Line005|Take 001|BaseLayer',
+        },
+        {
+          name: 'Line002|Plane001|Take 001|BaseLayer',
+        },
+        {
+          name: 'Line002|Rectangle001|Take 001|BaseLayer',
+        },
+      ],
+      path: 'sampledata/model/decos.fbx',
+    },
+  ],
+  materials: [
+    {
+      name: 'Material #31',
+      parameters: [
+        {
+          baseColor: [
+            0.5,
+            0.5,
+            0.5,
+            1,
+          ],
+        },
+        {
+          baseColorMap: null,
+        },
+        {
+          normalMap: null,
+        },
+        {
+          interpolatedColor: null,
+        },
+        {
+          metallic: 0,
+        },
+        {
+          metallicMap: null,
+        },
+        {
+          roughness: 1,
+        },
+        {
+          roughnessMap: null,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/fbx_material.sfm',
+    },
+    {
+      name: 'Material #32',
+      parameters: [
+        {
+          baseColor: [
+            0.98431400000000002,
+            0.98039200000000004,
+            0.48627500000000001,
+            1,
+          ],
+        },
+        {
+          baseColorMap: null,
+        },
+        {
+          normalMap: null,
+        },
+        {
+          interpolatedColor: null,
+        },
+        {
+          metallic: 0,
+        },
+        {
+          metallicMap: null,
+        },
+        {
+          roughness: 1,
+        },
+        {
+          roughnessMap: null,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/fbx_material.sfm',
+    },
+  ],
+  model: {
+    attributes: [
+      'Position',
+      'TexCoord',
+      'Orientation',
+      'BoneIndices',
+      'BoneWeights',
+    ],
+    collision: {},
+    file: 'sampledata/model/decos.fbx',
+    name: 'decos',
+    recenter: 'root',
+  },
+  version: '0.54:2',
+}

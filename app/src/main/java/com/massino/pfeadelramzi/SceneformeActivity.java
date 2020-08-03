@@ -174,7 +174,7 @@ public class SceneformeActivity extends AppCompatActivity {
         LinearLayout gallery = findViewById(R.id.gallery_layout);
         String obj =imageUrl;
         switch (obj) {
-            case "Fauteuil gris": {
+            case "foteuil": {
                 ImageView andy = new ImageView(this);
                 andy.setImageResource(R.drawable.fauteilgris);
                 andy.setContentDescription("fauteuil Créme");
@@ -183,7 +183,7 @@ public class SceneformeActivity extends AppCompatActivity {
 
             }
             break;
-            case "Banc": {
+            case "Bench": {
                 ImageView andy = new ImageView(this);
                 andy.setImageResource(R.drawable.banc);
                 andy.setContentDescription("banc extérieur");
@@ -192,7 +192,7 @@ public class SceneformeActivity extends AppCompatActivity {
 
             }
             break;
-            case "Bureau": {
+            case "bureau": {
                 ImageView andy = new ImageView(this);
                 andy.setImageResource(R.drawable.burau);
                 andy.setContentDescription("bureau");
@@ -201,7 +201,7 @@ public class SceneformeActivity extends AppCompatActivity {
 
             }
             break;
-            case "Fauteuil1" : {
+            case "ff" : {
                 ImageView andy = new ImageView(this);
                 andy.setImageResource(R.drawable.fauteuille3);
                 andy.setContentDescription("Fauteuil une place");
@@ -209,7 +209,7 @@ public class SceneformeActivity extends AppCompatActivity {
                 gallery.addView(andy);
 
             }
-            case "Fauteuil2" : {
+            case "foteuil2" : {
                 ImageView andy = new ImageView(this);
                 andy.setImageResource(R.drawable.fauteuille1);
                 andy.setContentDescription("Fauteuil bleu");
@@ -218,7 +218,7 @@ public class SceneformeActivity extends AppCompatActivity {
 
             }
             break;
-            case "Table" : {
+            case "table" : {
                 ImageView andy = new ImageView(this);
                 andy.setImageResource(R.drawable.table);
                 andy.setContentDescription("Table extérieur");
@@ -227,11 +227,70 @@ public class SceneformeActivity extends AppCompatActivity {
 
             }
             break;
-            case "Thor" : {
+            case "thor" : {
                 ImageView andy = new ImageView(this);
                 andy.setImageResource(R.drawable.thor);
                 andy.setContentDescription("Thor");
                 andy.setOnClickListener(view ->{addObject(Uri.parse("thor.sfb"));});
+                gallery.addView(andy);
+
+            }
+            break;
+
+            case "fotUnePlace" : {
+                ImageView andy = new ImageView(this);
+                andy.setImageResource(R.drawable.thor);
+                andy.setContentDescription("fotUnePlace");
+                andy.setOnClickListener(view ->{addObject(Uri.parse("fotUnePlace.sfb"));});
+                gallery.addView(andy);
+
+            }
+            break;
+
+            case "new2" : {
+                ImageView andy = new ImageView(this);
+                andy.setImageResource(R.drawable.thor);
+                andy.setContentDescription("new2");
+                andy.setOnClickListener(view ->{addObject(Uri.parse("new2.sfb"));});
+                gallery.addView(andy);
+
+            }
+            break;
+
+            case "new3" : {
+                ImageView andy = new ImageView(this);
+                andy.setImageResource(R.drawable.thor);
+                andy.setContentDescription("new3");
+                andy.setOnClickListener(view ->{addObject(Uri.parse("new3.sfb"));});
+                gallery.addView(andy);
+
+            }
+            break;
+
+            case "deco" : {
+                ImageView andy = new ImageView(this);
+                andy.setImageResource(R.drawable.thor);
+                andy.setContentDescription("deco");
+                andy.setOnClickListener(view ->{addObject(Uri.parse("deco.sfb"));});
+                gallery.addView(andy);
+
+            }
+            break;
+
+            case "decos" : {
+                ImageView andy = new ImageView(this);
+                andy.setImageResource(R.drawable.thor);
+                andy.setContentDescription("decos");
+                andy.setOnClickListener(view ->{addObject(Uri.parse("decos.sfb"));});
+                gallery.addView(andy);
+
+            }
+            break;
+            case "new1" : {
+                ImageView andy = new ImageView(this);
+                andy.setImageResource(R.drawable.thor);
+                andy.setContentDescription("new1");
+                andy.setOnClickListener(view ->{addObject(Uri.parse("new1.sfb"));});
                 gallery.addView(andy);
 
             }
