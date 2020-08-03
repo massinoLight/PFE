@@ -27,6 +27,7 @@
         <activity android:name=".AjouterMeubles" />
         <activity android:name=".MenuPrincipalGerant" />
         <activity android:name=".SceneformeActivity" />
+        <activity android:name=".SceneformKot" />
         <activity android:name=".ListeMeuble3DActivity" />
         <activity android:name=".MapsActivity" />
         <activity android:name=".MenuPrincipal" />

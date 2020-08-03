@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.massino.pfeadelramzi.models.Meuble
 import kotlinx.android.synthetic.main.activity_liste_meuble3_d.*
+import kotlinx.android.synthetic.main.nav_header_main.view.*
 import org.jetbrains.anko.toast
 
 class ListeMeuble3DActivity : AppCompatActivity() {
@@ -70,11 +71,13 @@ class ListeMeuble3DActivity : AppCompatActivity() {
         mon_recycler.adapter = MeubleAdapter(listMeubles.toTypedArray())
         {
 
-            val intent3 = Intent(this, SceneformeActivity::class.java)
-            // j'ai envoyé "nom" parceque avant il envoyait à chaque fois la valeur 1 et jamais la vrai position du click il faut implimenter une interface dans l'adapter et changer bcp de chose pour utiliser position...
-            intent3.putExtra("image_url",it.nom)
+            /* val intent3 = Intent(this, SceneformeActivity::class.java)
+             // j'ai envoyé "nom" parceque avant il envoyait à chaque fois la valeur 1 et jamais la vrai position du click il faut implimenter une interface dans l'adapter et changer bcp de chose pour utiliser position...
+             intent3.putExtra("image_url",it.nom)
+             startActivity(intent3)*/
+            val intent3 = Intent(this, SceneformKot::class.java)
+            intent3.putExtra("image_url", it.nom)
             startActivity(intent3)
-
 
 
 
