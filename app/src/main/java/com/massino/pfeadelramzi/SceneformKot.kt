@@ -2,27 +2,28 @@ package com.massino.pfeadelramzi
 
 import android.content.Intent
 import android.graphics.Bitmap
+import android.graphics.Point
 import android.net.Uri
 import android.os.Bundle
+import android.os.Environment
+import android.os.Handler
+import android.os.HandlerThread
 import android.view.MotionEvent
+import android.view.PixelCopy
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.FileProvider
+import com.google.android.material.snackbar.Snackbar
 import com.google.ar.core.*
 import com.google.ar.sceneform.AnchorNode
 import com.google.ar.sceneform.FrameTime
+import com.google.ar.sceneform.Node
 import com.google.ar.sceneform.Scene
 import com.google.ar.sceneform.rendering.ModelRenderable
 import com.google.ar.sceneform.rendering.Renderable
 import com.google.ar.sceneform.ux.ArFragment
 import com.google.ar.sceneform.ux.TransformableNode
-import android.graphics.Point
-import android.os.Environment
-import android.os.Handler
-import android.os.HandlerThread
-import android.view.PixelCopy
-import androidx.core.content.FileProvider
-import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.content_main2.*
 import java.io.ByteArrayOutputStream
 import java.io.File
@@ -62,7 +63,8 @@ class SceneformKot : AppCompatActivity() {
 
         }
 
-        del.setOnClickListener{takePhoto()}
+        fab.setOnClickListener{takePhoto()}
+        del.setOnClickListener{suppObj()}
     }
 
     private fun placeObject(arFragment: ArFragment, anchor: Anchor, uri: Uri) {
@@ -143,7 +145,7 @@ class SceneformKot : AppCompatActivity() {
 
 
 
-    // button ScreenShot 
+    // button ScreenShot
     private fun takePhoto() {
         val filename = generateFilename()
         val view = arFragment.arSceneView
@@ -209,5 +211,21 @@ class SceneformKot : AppCompatActivity() {
 
     }
 
+    // supprimer
+
+    private fun suppObj() {
+        val nodeList: List<Node> =
+            ArrayList<Node>(
+                arFragment.arSceneView.scene.children
+            )
+        for (childNode in nodeList) {
+            if (childNode is AnchorNode) {
+                if (childNode.anchor != null) {
+                    childNode.anchor!!.detach()
+                    childNode.setParent(null)
+                }
+            }
+        }
+    }
 
 }
