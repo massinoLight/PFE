@@ -11,6 +11,8 @@ import android.os.HandlerThread
 import android.view.MotionEvent
 import android.view.PixelCopy
 import android.view.View
+import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.FileProvider
@@ -57,9 +59,10 @@ class SceneformKot : AppCompatActivity() {
             val anchor = hitResult.createAnchor()
 
             //AJOUTER TOUT LES MODELS
-            val imageUrl = intent.getStringExtra("image_url")
-            Toast.makeText(this,imageUrl,Toast.LENGTH_LONG).show()
-            placeObject(arFragment, anchor, Uri.parse("Bench.sfb"))
+          //  val imageUrl = intent.getStringExtra("image_url")
+           // Toast.makeText(this,imageUrl,Toast.LENGTH_LONG).show()
+            initializeGallery(anchor)
+           // placeObject(arFragment, anchor, Uri.parse("Bench.sfb"))
 
         }
 
@@ -226,6 +229,157 @@ class SceneformKot : AppCompatActivity() {
                 }
             }
         }
+    }
+
+    //choisir le model
+
+
+    private fun initializeGallery(anchor: Anchor) {
+        // int imageUrl = getIntent().getIntExtra("image_url",0);
+        val imageUrl = intent.getStringExtra("image_url")
+        val gallery = findViewById<LinearLayout>(R.id.gallery_layout)
+        //placeObject(arFragment, anchor, Uri.parse("Bench.sfb"))
+
+        when (imageUrl) {
+            "foteuil" -> {
+                val andy = ImageView(this)
+                andy.setImageResource(R.drawable.fauteilgris)
+                andy.contentDescription = "fauteuil Créme"
+                gallery.addView(andy)
+                placeObject(arFragment,anchor,Uri.parse("foteuil.sfb"))
+
+            }
+            "Bench" -> {
+
+                val andy = ImageView(this)
+                andy.setImageResource(R.drawable.banc)
+                andy.contentDescription = "banc extérieur"
+                Toast.makeText(this,"aklin",Toast.LENGTH_LONG).show()
+
+                placeObject(arFragment,anchor,Uri.parse("Bench.sfb"))
+                gallery.addView(andy)
+            }
+            "bureau" -> {
+                val andy = ImageView(this)
+                andy.setImageResource(R.drawable.burau)
+                andy.contentDescription = "bureau"
+
+                    placeObject(arFragment,anchor,Uri.parse("bureau.sfb"))
+
+
+                gallery.addView(andy)
+            }
+            "ff" -> {
+
+                    val andy = ImageView(this)
+                    andy.setImageResource(R.drawable.fauteuille3)
+                    andy.contentDescription = "Fauteuil une place"
+
+                        placeObject(arFragment,anchor,Uri.parse("ff.sfb"))
+
+
+                    gallery.addView(andy)
+
+            }
+            "foteuil2" -> {
+                val andy = ImageView(this)
+                andy.setImageResource(R.drawable.fauteuille1)
+                andy.contentDescription = "Fauteuil bleu"
+
+                    placeObject(arFragment,anchor,Uri.parse("foteuil2.sfb"))
+
+
+                gallery.addView(andy)
+            }
+            "table" -> {
+                val andy = ImageView(this)
+                andy.setImageResource(R.drawable.table)
+                andy.contentDescription = "Table extérieur"
+
+                    placeObject(arFragment,anchor,Uri.parse("table.sfb"))
+
+
+                gallery.addView(andy)
+            }
+            "thor" -> {
+                val andy = ImageView(this)
+                andy.setImageResource(R.drawable.thor)
+                andy.contentDescription = "Thor"
+
+                    placeObject(arFragment,anchor,Uri.parse("thor.sfb"))
+
+
+                gallery.addView(andy)
+            }
+            "fotUnePlace" -> {
+                val andy = ImageView(this)
+                andy.setImageResource(R.drawable.thor)
+                andy.contentDescription = "fotUnePlace"
+
+                    placeObject(arFragment,anchor,Uri.parse("fotUnePlace.sfb"))
+
+
+                gallery.addView(andy)
+            }
+            "new2" -> {
+                val andy = ImageView(this)
+                andy.setImageResource(R.drawable.thor)
+                andy.contentDescription = "new2"
+
+                    placeObject(arFragment,anchor,Uri.parse("new2.sfb"))
+
+                gallery.addView(andy)
+            }
+            "new3" -> {
+                val andy = ImageView(this)
+                andy.setImageResource(R.drawable.thor)
+                andy.contentDescription = "new3"
+
+                    placeObject(arFragment,anchor,Uri.parse("new3.sfb"))
+
+
+                gallery.addView(andy)
+            }
+            "deco" -> {
+                val andy = ImageView(this)
+                andy.setImageResource(R.drawable.thor)
+                andy.contentDescription = "deco"
+
+                    placeObject(arFragment,anchor,Uri.parse("deco.sfb"))
+
+
+                gallery.addView(andy)
+            }
+            "decos" -> {
+                val andy = ImageView(this)
+                andy.setImageResource(R.drawable.thor)
+                andy.contentDescription = "decos"
+
+                    placeObject(arFragment,anchor,Uri.parse("decos.sfb"))
+
+                    gallery.addView(andy)
+
+            }
+
+
+            "new1" -> {
+                    val andy = ImageView(this)
+                    andy.setImageResource(R.drawable.thor)
+                    andy.contentDescription = "new1"
+                  //  andy.setOnClickListener { view: View? ->
+                        //   addObject(Uri.parse("new1.sfb")  )
+                        placeObject(arFragment,anchor,Uri.parse("new1.sfb"))
+
+                    //}
+                    gallery.addView(andy)
+                }
+
+            else -> Toast.makeText(applicationContext, "rien n'a etai ressu", Toast.LENGTH_SHORT).show();
+
+
+            }
+
+
     }
 
 }
