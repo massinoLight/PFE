@@ -1,5 +1,7 @@
 package com.massino.pfeadelramzi
 
+import android.content.Intent
+import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Bundle
 import android.view.MotionEvent
@@ -15,6 +17,19 @@ import com.google.ar.sceneform.rendering.Renderable
 import com.google.ar.sceneform.ux.ArFragment
 import com.google.ar.sceneform.ux.TransformableNode
 import android.graphics.Point
+import android.os.Environment
+import android.os.Handler
+import android.os.HandlerThread
+import android.view.PixelCopy
+import androidx.core.content.FileProvider
+import com.google.android.material.snackbar.Snackbar
+import kotlinx.android.synthetic.main.content_main2.*
+import java.io.ByteArrayOutputStream
+import java.io.File
+import java.io.FileOutputStream
+import java.io.IOException
+import java.text.SimpleDateFormat
+import java.util.*
 
 
 class SceneformKot : AppCompatActivity() {
@@ -46,6 +61,8 @@ class SceneformKot : AppCompatActivity() {
             placeObject(arFragment, anchor, Uri.parse("Bench.sfb"))
 
         }
+
+        del.setOnClickListener{takePhoto()}
     }
 
     private fun placeObject(arFragment: ArFragment, anchor: Anchor, uri: Uri) {
@@ -124,6 +141,73 @@ class SceneformKot : AppCompatActivity() {
         return Point(vw.width / 2, vw.height / 2)
     }
 
+
+
+    // button ScreenShot 
+    private fun takePhoto() {
+        val filename = generateFilename()
+        val view = arFragment.arSceneView
+        val bitmap = Bitmap.createBitmap(view.width, view.height,
+            Bitmap.Config.ARGB_8888)
+        val handlerthread = HandlerThread("PixelCopier")
+        handlerthread.start()
+        PixelCopy.request(view, bitmap, {
+            if (it == PixelCopy.SUCCESS) {
+                try {
+                    saveToBitmap(bitmap, filename)
+                } catch (e: IOException) {
+                    e.printStackTrace()
+                    Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
+                    return@request
+                }
+                val snack = Snackbar.make(findViewById(android.R.id.content),
+                    "Photo saved", Snackbar.LENGTH_LONG)
+                snack.setAction("open in photos") {
+                    val photoFile = File(filename)
+                    val photoURI = FileProvider.getUriForFile(this,
+                        this.packageName + ".ar.hariofspades.provider",
+                        photoFile)
+                    val intent = Intent(Intent.ACTION_VIEW, photoURI)
+                    intent.setDataAndType(photoURI, "image/*")
+                    intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+                    startActivity(intent)
+                }
+                snack.show()
+            } else {
+                Toast.makeText(this, "Failed to copyPixels: $it", Toast.LENGTH_LONG).show()
+            }
+            handlerthread.quitSafely()
+        }, Handler(handlerthread.looper))
+    }
+
+    private fun generateFilename(): String {
+        val date = SimpleDateFormat("yyyyMMddHHmmss", Locale.getDefault()).format(Date())
+        return this.getExternalFilesDir(Environment.DIRECTORY_PICTURES).toString() +
+                File.separator + "Sceneform/" + date + "_screenshot.jpg"
+      //  return Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES).toString() +
+            //    File.separator + "Sceneform/" + date + "_screenshot.jpg"
+    }
+
+    private fun saveToBitmap(bitmap: Bitmap, filename: String) {
+        val out = File(filename)
+        if (!out.parentFile.exists()) {
+            out.parentFile.mkdirs()
+        }
+        try {
+
+            val outputStream = FileOutputStream(filename)
+            val outputData = ByteArrayOutputStream()
+            bitmap.compress(Bitmap.CompressFormat.PNG, 100, outputData)
+            outputData.writeTo(outputStream)
+            outputStream.flush()
+            outputStream.close()
+
+        } catch (e: Exception) {
+            e.printStackTrace()
+            throw IOException("Failed to save bitmap to disk", e)
+        }
+
+    }
 
 
 }
