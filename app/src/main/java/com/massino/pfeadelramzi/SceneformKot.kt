@@ -241,35 +241,33 @@ class SceneformKot : AppCompatActivity() {
         //placeObject(arFragment, anchor, Uri.parse("Bench.sfb"))
 
         when (imageUrl) {
-            "foteuil" -> {
+            "Fauteuil gris" -> {
                 val andy = ImageView(this)
                 andy.setImageResource(R.drawable.fauteilgris)
-                andy.contentDescription = "fauteuil Créme"
+                andy.contentDescription = "Fauteuil gris deux place"
                 gallery.addView(andy)
                 placeObject(arFragment,anchor,Uri.parse("foteuil.sfb"))
 
             }
-            "Bench" -> {
+            "Banc" -> {
 
                 val andy = ImageView(this)
                 andy.setImageResource(R.drawable.banc)
-                andy.contentDescription = "banc extérieur"
-                Toast.makeText(this,"aklin",Toast.LENGTH_LONG).show()
-
+                andy.contentDescription = "Banc"
                 placeObject(arFragment,anchor,Uri.parse("Bench.sfb"))
                 gallery.addView(andy)
             }
-            "bureau" -> {
+            "Bureau" -> {
                 val andy = ImageView(this)
                 andy.setImageResource(R.drawable.burau)
-                andy.contentDescription = "bureau"
+                andy.contentDescription = "Bureau"
 
                     placeObject(arFragment,anchor,Uri.parse("bureau.sfb"))
 
 
                 gallery.addView(andy)
             }
-            "ff" -> {
+            "Fauteuil une place" -> {
 
                     val andy = ImageView(this)
                     andy.setImageResource(R.drawable.fauteuille3)
@@ -281,27 +279,27 @@ class SceneformKot : AppCompatActivity() {
                     gallery.addView(andy)
 
             }
-            "foteuil2" -> {
+            "Fauteuil trois places" -> {
                 val andy = ImageView(this)
                 andy.setImageResource(R.drawable.fauteuille1)
-                andy.contentDescription = "Fauteuil bleu"
+                andy.contentDescription = "Fauteuil trois places"
 
                     placeObject(arFragment,anchor,Uri.parse("foteuil2.sfb"))
 
 
                 gallery.addView(andy)
             }
-            "table" -> {
+            "Table" -> {
                 val andy = ImageView(this)
                 andy.setImageResource(R.drawable.table)
-                andy.contentDescription = "Table extérieur"
+                andy.contentDescription = "Table"
 
                     placeObject(arFragment,anchor,Uri.parse("table.sfb"))
 
 
                 gallery.addView(andy)
             }
-            "thor" -> {
+            "Thor" -> {
                 val andy = ImageView(this)
                 andy.setImageResource(R.drawable.thor)
                 andy.contentDescription = "Thor"
@@ -311,49 +309,49 @@ class SceneformKot : AppCompatActivity() {
 
                 gallery.addView(andy)
             }
-            "fotUnePlace" -> {
+            "Fauteuil simple" -> {
                 val andy = ImageView(this)
                 andy.setImageResource(R.drawable.thor)
-                andy.contentDescription = "fotUnePlace"
+                andy.contentDescription = "Fauteuil simple"
 
                     placeObject(arFragment,anchor,Uri.parse("fotUnePlace.sfb"))
 
 
                 gallery.addView(andy)
             }
-            "new2" -> {
+            "Salon" -> {
                 val andy = ImageView(this)
                 andy.setImageResource(R.drawable.thor)
-                andy.contentDescription = "new2"
+                andy.contentDescription = "Salon"
 
                     placeObject(arFragment,anchor,Uri.parse("new2.sfb"))
 
                 gallery.addView(andy)
             }
-            "new3" -> {
+            "Lit une place" -> {
                 val andy = ImageView(this)
                 andy.setImageResource(R.drawable.thor)
-                andy.contentDescription = "new3"
+                andy.contentDescription = "Lit une place"
 
                     placeObject(arFragment,anchor,Uri.parse("new3.sfb"))
 
 
                 gallery.addView(andy)
             }
-            "deco" -> {
+            "Etagère" -> {
                 val andy = ImageView(this)
                 andy.setImageResource(R.drawable.thor)
-                andy.contentDescription = "deco"
+                andy.contentDescription = "Etagère"
 
                     placeObject(arFragment,anchor,Uri.parse("deco.sfb"))
 
 
                 gallery.addView(andy)
             }
-            "decos" -> {
+            "Commande" -> {
                 val andy = ImageView(this)
                 andy.setImageResource(R.drawable.thor)
-                andy.contentDescription = "decos"
+                andy.contentDescription = "Commande"
 
                     placeObject(arFragment,anchor,Uri.parse("decos.sfb"))
 
@@ -362,10 +360,10 @@ class SceneformKot : AppCompatActivity() {
             }
 
 
-            "new1" -> {
+            "Cuisine" -> {
                     val andy = ImageView(this)
                     andy.setImageResource(R.drawable.thor)
-                    andy.contentDescription = "new1"
+                    andy.contentDescription = "Cuisine"
                   //  andy.setOnClickListener { view: View? ->
                         //   addObject(Uri.parse("new1.sfb")  )
                         placeObject(arFragment,anchor,Uri.parse("new1.sfb"))
