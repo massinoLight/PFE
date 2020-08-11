@@ -1,42 +1,42 @@
 {
   "project_info": {
-    "project_number": "627301329010",
-    "firebase_url": "https://pfeadelramzi.firebaseio.com",
-    "project_id": "pfeadelramzi",
-    "storage_bucket": "pfeadelramzi.appspot.com"
+    "project_number": "212097442735",
+    "firebase_url": "https://pfe-app-cfc22.firebaseio.com",
+    "project_id": "pfe-app-cfc22",
+    "storage_bucket": "pfe-app-cfc22.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:627301329010:android:0cc957410d333235757aeb",
+        "mobilesdk_app_id": "1:212097442735:android:79843d644cf57f441c455a",
         "android_client_info": {
-          "package_name": "com.massino.pfeadelramzi"
+          "package_name": "com.pfe.pfemgl"
         }
       },
       "oauth_client": [
         {
-          "client_id": "627301329010-icidr0mijvbhcg3kuum8jo0hrp24eegs.apps.googleusercontent.com",
+          "client_id": "212097442735-7uqnr7s9va6oh6n2fg342t0vbujlvtur.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.massino.pfeadelramzi",
-            "certificate_hash": "169bf65af905a05b529eea9b5b45bade962ec7e3"
+            "package_name": "com.pfe.pfemgl",
+            "certificate_hash": "036c86cb7a69784aac9f71d80cde20bb31dbb81f"
           }
         },
         {
-          "client_id": "627301329010-l5jf3so5b260vneo63tmf6ogeh1a367d.apps.googleusercontent.com",
+          "client_id": "212097442735-0sph4tf7ef40gpjne0v29mo0reu70jvh.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAp7YPWiZ9THwhZQ-Bnpcr-7hSzkuWLQWU"
+          "current_key": "AIzaSyC0io6MHSPdJaIo_KflhIWaUJji05w_eOU"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "627301329010-l5jf3so5b260vneo63tmf6ogeh1a367d.apps.googleusercontent.com",
+              "client_id": "212097442735-0sph4tf7ef40gpjne0v29mo0reu70jvh.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

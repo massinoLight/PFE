@@ -12,9 +12,11 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import com.massino.pfeadelramzi.AjouterMeubles
 import com.massino.pfeadelramzi.ListeMeuble3DActivity
 import com.massino.pfeadelramzi.MainActivity
 import com.massino.pfeadelramzi.R
+import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment() {
 
@@ -34,6 +36,11 @@ class HomeFragment : Fragment() {
             val intent2 = Intent(getActivity(), ListeMeuble3DActivity::class.java)
             startActivity(intent2)
         }
+        // essaie
+        /*ajout.setOnClickListener{
+            val intent5= Intent(getActivity(), AjouterMeubles::class.java)
+            startActivity(intent5)
+        }*/
 
 
         return root
