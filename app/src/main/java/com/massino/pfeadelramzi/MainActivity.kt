@@ -58,7 +58,8 @@ class MainActivity : AppCompatActivity() {
             AuthUI.IdpConfig.EmailBuilder().build(),
             //AuthUI.IdpConfig.PhoneBuilder().build(),
             AuthUI.IdpConfig.GoogleBuilder().build(),
-            AuthUI.IdpConfig.FacebookBuilder().build())
+            AuthUI.IdpConfig.FacebookBuilder().build(),
+        AuthUI.IdpConfig.AnonymousBuilder().build())
 
         // Create and launch sign-in intent
         startActivityForResult(
@@ -106,7 +107,7 @@ class MainActivity : AppCompatActivity() {
                 // sign-in flow using the back button. Otherwise check
                 // response.getError().getErrorCode() and handle the error.
                 // ...
-                toast("Probléme survenu")
+                toast("opération annullée")
             }
 
         }

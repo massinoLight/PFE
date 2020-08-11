@@ -4,12 +4,18 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.google.firebase.database.FirebaseDatabase
 import java.lang.Exception
 
 class MenuPrincipalGerant : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu_principal_gerant)
+        var firebaseDatabas= FirebaseDatabase.getInstance()
+        var databaseRef = firebaseDatabas.reference
+
+       // databaseRef.
+
     }
 
     fun ajouterMeuble(view: View) {
