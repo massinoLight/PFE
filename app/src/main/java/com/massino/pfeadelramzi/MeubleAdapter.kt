@@ -49,4 +49,5 @@ class MeubleAdapter(private val exampleList: Array<Meuble>,val listener: (Meuble
 
     }
 
+
 }

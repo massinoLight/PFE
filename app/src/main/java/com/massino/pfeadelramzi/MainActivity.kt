@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
+import android.widget.Toast
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
@@ -57,7 +58,8 @@ class MainActivity : AppCompatActivity() {
             AuthUI.IdpConfig.EmailBuilder().build(),
             //AuthUI.IdpConfig.PhoneBuilder().build(),
             AuthUI.IdpConfig.GoogleBuilder().build(),
-            AuthUI.IdpConfig.FacebookBuilder().build())
+            AuthUI.IdpConfig.FacebookBuilder().build(),
+        AuthUI.IdpConfig.AnonymousBuilder().build())
 
         // Create and launch sign-in intent
         startActivityForResult(
@@ -80,43 +82,34 @@ class MainActivity : AppCompatActivity() {
                 // Successfully signed in
                 val user = FirebaseAuth.getInstance().currentUser
 
-                /*         RAMZI ---
-                if (user.admin=false) {
-                // envoyer vers l'interface client >> Menu Principal          */
                 if (user != null) {
-                    val intent2 = Intent(this, MenuPrincipal::class.java)
-                    intent2.putExtra(EXTRA_EMAIL, user.email)
-                    intent2.putExtra(EXTRA_NOM, user.displayName)
-                    intent2.putExtra(EXTRA_PHOTO,user.photoUrl.toString())
-                    startActivity(intent2)
-                    finish()
+                    if (user.uid !="Un0LPGIeAmcRO6yPTrj1c2A0RwH3"){
+                        val intent2 = Intent(this, MenuPrincipal::class.java)
+                        intent2.putExtra(EXTRA_EMAIL, user.email)
+                        intent2.putExtra(EXTRA_NOM, user.displayName)
+                        intent2.putExtra(EXTRA_PHOTO,user.photoUrl.toString())
+                        startActivity(intent2)
+                        finish()
+                    }else{
+                        val intent3 = Intent(this, MenuPrincipalGerant::class.java)
+                        intent3.putExtra(EXTRA_EMAIL, user.email)
+                        intent3.putExtra(EXTRA_NOM, user.displayName)
+                        intent3.putExtra(EXTRA_PHOTO,user.photoUrl.toString())
+                        startActivity(intent3)
+                        finish()
+                    }
                 }else {
-                    toast("utilisateur introuvable")
+                    Toast.makeText(this,"Utilisateur introuvable",Toast.LENGTH_LONG).show()
                 }
 
-                /* RAMZI ---
-                  }else{
-
-                  // si Admin = true il envoie vers l'interface Gerant >> MenuPrincipalAdmin
-                 if (user != null) {
-                    val intent3 = Intent(this, MenuPrincipalAdmin::class.java)
-                    intent2.putExtra(EXTRA_EMAIL, user.email)
-                    intent2.putExtra(EXTRA_NOM, user.displayName)
-                    intent2.putExtra(EXTRA_PHOTO,user.photoUrl.toString())
-                    startActivity(intent3)
-                    finish()
-                }else {
-                    toast("utilisateur introuvable")
-                }
-                 */
-
-            } else {
+                }else{
                 // Sign in failed. If response is null the user canceled the
                 // sign-in flow using the back button. Otherwise check
                 // response.getError().getErrorCode() and handle the error.
                 // ...
-                toast("Probléme survenu")
+                toast("opération annullée")
             }
+
         }
     }
     // [END auth_fui_result]
