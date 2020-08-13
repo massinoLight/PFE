@@ -44,7 +44,7 @@ class SceneformKot : AppCompatActivity() {
     private var isTracking = false
     private var isHitting = false
     //private var fragment: ArFragment? = null
-    private var modelLoader: ModelLoader? = null
+ //   private var modelLoader: ModelLoader? = null
     private val theAnchorNode: AnchorNode? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
