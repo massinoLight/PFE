@@ -7,7 +7,7 @@
     tools:context=".AjouterMeubles"
     android:background="@drawable/custom_menu_backg">
 
-    <TextView
+    <EditText
         android:id="@+id/textView3"
         android:layout_width="404dp"
         android:layout_height="73dp"
@@ -22,7 +22,7 @@
         tools:layout_editor_absoluteX="3dp"
         tools:ignore="MissingConstraints" />
 
-    <TextView
+    <EditText
         android:id="@+id/textView"
         android:layout_width="404dp"
         android:layout_height="73dp"
@@ -35,9 +35,10 @@
         android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints,RtlCompat"
-        tools:layout_editor_absoluteX="3dp" />
+        tools:layout_editor_absoluteX="3dp"
+        android:autofillHints="" />
 
-    <TextView
+    <EditText
         android:id="@+id/textView2"
         android:layout_width="404dp"
         android:layout_height="73dp"

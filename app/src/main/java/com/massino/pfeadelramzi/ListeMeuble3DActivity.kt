@@ -16,6 +16,7 @@ class ListeMeuble3DActivity : AppCompatActivity() {
     private val mPrix = java.util.ArrayList<String>()
     private val mDislistMeubleslistMeublespo = java.util.ArrayList<String>()
 
+
     var listMeubles = mutableListOf<Meuble>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,6 +32,7 @@ class ListeMeuble3DActivity : AppCompatActivity() {
             val meuble = Meuble(R.drawable.fauteilgris, "Fauteuil gris","25000da",1)
             val meuble1 = Meuble(R.drawable.fauteuille1, "Fauteuil une place","1000da",1)
             val meuble2 = Meuble(R.drawable.burau, "Bureau","25000da",1)
+
             list.add(meuble)
         //mon_recycler.adapter?.notifyItemInserted(0)
             list.add(meuble1)
