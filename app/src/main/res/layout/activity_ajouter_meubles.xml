@@ -23,22 +23,6 @@
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/textView"
-        android:layout_width="404dp"
-        android:layout_height="73dp"
-        android:layout_marginTop="216dp"
-        android:background="#928DAB"
-        android:gravity="center"
-        android:hint="Nom"
-        android:inputType="text"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints,RtlCompat"
-        tools:layout_editor_absoluteX="3dp"
-        android:autofillHints="" />
-
-    <EditText
         android:id="@+id/textView2"
         android:layout_width="404dp"
         android:layout_height="73dp"
@@ -49,10 +33,9 @@
         android:textStyle="bold"
         android:textSize="20dp"
         android:gravity="center"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_nom"
         tools:layout_editor_absoluteX="3dp"
         tools:ignore="MissingConstraints" />
-
     <Button
         android:id="@+id/button4"
 
@@ -68,4 +51,20 @@
         app:layout_constraintVertical_bias="0.203"
         tools:layout_editor_absoluteX="105dp"
         tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinner_nom"
+        android:layout_width="404dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="220dp"
+        android:background="#928DAB"
+        android:backgroundTint="#928DAB"
+        android:gravity="center"
+        android:spinnerMode="dropdown"
+        android:autofillHints="Selectionner un meuble"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

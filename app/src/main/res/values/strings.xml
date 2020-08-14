@@ -17,6 +17,20 @@
     <string name="menu_panier">Panier</string>
     <string name="menu_contact">Nous Contacter</string>
     <string name="menu_rite">Nous Noter</string>
+    <string-array name="Nom_Meuble">
+        <item>Fauteuil Gris</item>
+        <item>Fauteuil une place</item>
+        <item>Bureau</item>
+        <item>Banc</item>
+        <item>Table</item>
+        <item>Fauteuil trois places</item>
+        <item>Fauteuil simple</item>
+        <item>Salon</item>
+        <item>Etagère</item>
+        <item>Commande</item>
+        <item>Cuisine</item>
+    </string-array>
+
 
 
     <!-- Facebook application ID and custom URL scheme (app ID prefixed by 'fb'). -->
