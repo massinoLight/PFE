@@ -2,10 +2,13 @@ package com.massino.pfeadelramzi
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.firebase.database.*
 import com.massino.pfeadelramzi.models.Meuble
 import kotlinx.android.synthetic.main.activity_liste_meuble3_d.*
+import kotlinx.android.synthetic.main.activity_test_b_d_d.*
 import kotlinx.android.synthetic.main.nav_header_main.view.*
 import org.jetbrains.anko.toast
 
@@ -16,14 +19,47 @@ class ListeMeuble3DActivity : AppCompatActivity() {
     private val mPrix = java.util.ArrayList<String>()
     private val mDislistMeubleslistMeublespo = java.util.ArrayList<String>()
 
-
+    var mdatabase : DatabaseReference?=null
     var listMeubles = mutableListOf<Meuble>()
+  //  var listmeub= arrayOf("dd","ddd","dd")
+    var listmeub:String="lol"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_liste_meuble3_d)
-         listMeubles = generateList()
+        // salon je vais mettre variable de nom du meuble choisi
+      //  recupData("Salon")
+        var l = recupData("Table")
+        Toast.makeText(this,l,Toast.LENGTH_LONG).show()
+
+
+
+        listMeubles = generateList()
         buildRecyclerView()
+    }
+    //fun recupData (nommeub:String):Array<String>{
+    fun recupData (nommeub:String):String?{
+
+        mdatabase = FirebaseDatabase.getInstance().reference
+            .child("MeubleDB").child(nommeub)
+        mdatabase!!.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                var prixx = snapshot.child("prix").value.toString()
+               // var stockk = snapshot.child("stock").value.toString()
+                listmeub= prixx
+
+
+                // il faut une solution pour recuperer les data recuperer dans cette procedure
+
+
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                TODO("Not yet implemented")
+            }
+        })
+
+        return listmeub
     }
 
     private fun generateList(): MutableList<Meuble>{
