@@ -2,15 +2,12 @@ package com.massino.pfeadelramzi
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.database.*
 import com.massino.pfeadelramzi.models.Meuble
 import kotlinx.android.synthetic.main.activity_liste_meuble3_d.*
-import kotlinx.android.synthetic.main.activity_test_b_d_d.*
-import kotlinx.android.synthetic.main.nav_header_main.view.*
-import org.jetbrains.anko.toast
+
 
 class ListeMeuble3DActivity : AppCompatActivity() {
 
@@ -21,37 +18,47 @@ class ListeMeuble3DActivity : AppCompatActivity() {
 
     var mdatabase : DatabaseReference?=null
     var listMeubles = mutableListOf<Meuble>()
-  //  var listmeub= arrayOf("dd","ddd","dd")
-    var listmeub:String="lol"
+
+    //  var listmeub= arrayOf("dd","ddd","dd")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_liste_meuble3_d)
+
         // salon je vais mettre variable de nom du meuble choisi
       //  recupData("Salon")
-        var l = recupData("Table")
-        Toast.makeText(this,l,Toast.LENGTH_LONG).show()
 
-
-
-        listMeubles = generateList()
-        buildRecyclerView()
-    }
-    //fun recupData (nommeub:String):Array<String>{
-    fun recupData (nommeub:String):String?{
-
+    //   var listData = ArrayList<Meuble?>()
+        // mdatabase!!.addChildEventListener(object : ChildEventListener{            } )
+     //   mdatabase = FirebaseDatabase.getInstance().reference.child("MeubleDB").child("Bureau")
+      //  val nommb = intent.getStringExtra("nommeuble")
         mdatabase = FirebaseDatabase.getInstance().reference
-            .child("MeubleDB").child(nommeub)
         mdatabase!!.addValueEventListener(object : ValueEventListener {
+            // solution provisoir
             override fun onDataChange(snapshot: DataSnapshot) {
-                var prixx = snapshot.child("prix").value.toString()
-               // var stockk = snapshot.child("stock").value.toString()
-                listmeub= prixx
-
-
-                // il faut une solution pour recuperer les data recuperer dans cette procedure
-
-
+              //  var prixx = snapshot.child("prix").value.toString()
+            //    for (sna: DataSnapshot in snapshot.children){
+                    val ir = snapshot.child("Banc").child("imageResource").value.toString().toInt()
+                    val n = snapshot.child("Banc").child("nom").value.toString()
+                    val p = snapshot.child("Banc").child("prix").value.toString().toInt()
+                    val st = snapshot.child("Banc").child("stock").value.toString().toInt()
+                  //  val l: Meuble? = snapshot.getValue(Meuble::class.java)
+                    listMeubles.add(Meuble(ir,n,p,st))
+                val iroo = snapshot.child("Salon").child("imageResource").value.toString().toInt()
+                val noo = snapshot.child("Salon").child("nom").value.toString()
+                val poo = snapshot.child("Salon").child("prix").value.toString().toInt()
+                val stoo = snapshot.child("Salon").child("stock").value.toString().toInt()
+                listMeubles.add(Meuble(iroo,noo,poo,stoo))
+                val irii = snapshot.child("Table").child("imageResource").value.toString().toInt()
+                val nii = snapshot.child("Table").child("nom").value.toString()
+                val pii = snapshot.child("Table").child("prix").value.toString().toInt()
+                val stii = snapshot.child("Table").child("stock").value.toString().toInt()
+                listMeubles.add(Meuble(irii,nii,pii,stii))
+                   // listMeubles.add(l!!)
+             //  }
+                mon_recycler.setHasFixedSize(true)
+                mon_recycler.layoutManager = LinearLayoutManager(this@ListeMeuble3DActivity)
+                mon_recycler.adapter = MeubleAdapter(listMeubles.toTypedArray()){}
             }
 
             override fun onCancelled(error: DatabaseError) {
@@ -59,10 +66,31 @@ class ListeMeuble3DActivity : AppCompatActivity() {
             }
         })
 
-        return listmeub
+
+
+        //listMeubles = generateList()
+       // buildRecyclerView()
     }
 
-    private fun generateList(): MutableList<Meuble>{
+   /* fun recupData(){
+        mdatabase = FirebaseDatabase.getInstance().reference
+            .child("MeubleDB").child("Salon")
+        mdatabase!!.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                var prixx = snapshot.child("prix").value.toString()
+                // var stockk = snapshot.child("stock").value.toString()
+                // ICI AU PIRE JE PREND TTE LES VALEURS ET J'appelle generatelist() avec des parametre obtenu ici
+                // ça MARCHE PAS !! oubien je les mets tous dans des textfield visibility GONE
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                TODO("Not yet implemented")
+            }
+        })
+    }
+*/
+
+   /* private fun generateList(): MutableList<Meuble>{
 
         val list = ArrayList<Meuble>()
             val meuble = Meuble(R.drawable.fauteilgris, "Fauteuil gris","25000da",1)
@@ -96,14 +124,11 @@ class ListeMeuble3DActivity : AppCompatActivity() {
         val meuble12 = Meuble(R.drawable.tableverre, "Cuisine","25000da",1)
         list.add(meuble12)
 
-        // j'ai ajouté au hasard ken le tout pour essayer si un des models marche
-
         return list
-    }
+    }*/
 
-    fun buildRecyclerView() {
+   /* fun buildRecyclerView() {
         mon_recycler.setHasFixedSize(true)
-        //mon_recycler.setAdapter(mAdapter)
         mon_recycler.layoutManager = LinearLayoutManager(this)
 
         mon_recycler.adapter = MeubleAdapter(listMeubles.toTypedArray())
@@ -124,7 +149,7 @@ class ListeMeuble3DActivity : AppCompatActivity() {
         }
 
 
-    }
+    }*/
 
 
 

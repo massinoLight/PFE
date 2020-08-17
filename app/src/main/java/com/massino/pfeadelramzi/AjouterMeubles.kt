@@ -36,13 +36,13 @@ class AjouterMeubles : AppCompatActivity(), AdapterView.OnItemSelectedListener{
 
         button4.setOnClickListener{
             var nomUI = spinner.selectedItem.toString()
-            var prixUI = textView2.text.toString()
+            var prixUI = textView2.text.toString().toInt()
             var stockUI=  textView3.text.toString().toInt()
 
-            var databaseref = firebaseDatabase.getReference("MeubleDB")
-                .child(nomUI)
+          //  var databaseref = firebaseDatabase.getReference("MeubleDB").child(nomUI)
+            var databaseref = firebaseDatabase.getReference(nomUI)
 
-            if ( nomUI != null || !TextUtils.isEmpty(prixUI) || !TextUtils.isEmpty(stockUI.toString())){
+            if ( nomUI != null || !TextUtils.isEmpty(prixUI.toString()) || !TextUtils.isEmpty(stockUI.toString())){
                 var meuble = Meuble(R.drawable.fauteuille2,nomUI,prixUI,stockUI)
 
                 databaseref.setValue(meuble)
@@ -51,7 +51,8 @@ class AjouterMeubles : AppCompatActivity(), AdapterView.OnItemSelectedListener{
             }
 
 
-            val intent5 = Intent(this, TestBDD::class.java)
+            val intent5 = Intent(this, ListeMeuble3DActivity::class.java)
+            //intent5.putExtra("nommeuble",nomUI)
             startActivity(intent5)
 
         }

@@ -24,10 +24,11 @@ class MeubleAdapter(private val exampleList: Array<Meuble>,val listener: (Meuble
     }
     override fun onBindViewHolder(holder: ExampleViewHolder, position: Int) {
         val currentItem = exampleList[position]
-        holder.imageView.setImageResource(currentItem.imageResource)
         holder.textViewNomMeuble.text = currentItem.nom
-        holder.textViewPrix.text = currentItem.prix
+        holder.textViewPrix.text = currentItem.prix.toString()
         holder.textViewStock.text = currentItem.stock.toString()
+        holder.imageView.setImageResource(currentItem.imageResource)
+
         //le meuble a afficher
         holder.bind(exampleList[position],listener)
     }

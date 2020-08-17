@@ -1,3 +1,4 @@
 package com.massino.pfeadelramzi.models
 
-data class Meuble(val imageResource: Int, val nom: String, val prix: String,val stock:Int)
+data class Meuble(val imageResource: Int = -1, val nom: String="", val prix: Int=-1,val stock:Int=-1)
+
