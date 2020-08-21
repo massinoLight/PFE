@@ -1,13 +1,11 @@
 package com.massino.pfeadelramzi
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.View
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
-import android.widget.Spinner
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.database.FirebaseDatabase
 import com.massino.pfeadelramzi.models.Meuble
@@ -43,7 +41,7 @@ class AjouterMeubles : AppCompatActivity(), AdapterView.OnItemSelectedListener{
             var databaseref = firebaseDatabase.getReference(nomUI)
 
             if ( nomUI != null || !TextUtils.isEmpty(prixUI.toString()) || !TextUtils.isEmpty(stockUI.toString())){
-                var meuble = Meuble(R.drawable.fauteuille2,nomUI,prixUI,stockUI)
+                var meuble = Meuble(getImRess(nomUI),nomUI,prixUI,stockUI)
 
                 databaseref.setValue(meuble)
             }else {
@@ -65,4 +63,54 @@ class AjouterMeubles : AppCompatActivity(), AdapterView.OnItemSelectedListener{
        parent?.getItemAtPosition(position)
     }
 
+    private fun getImRess (meub_name:String):Int{
+        var i:Int
+        when (meub_name) {
+            "Fauteuil gris" -> {
+                i= R.drawable.fauteilgris
+            }
+            "Banc" -> {
+                i= R.drawable.banc
+            }
+            "Bureau" -> {
+                i= R.drawable.burau
+            }
+            "Fauteuil une place" -> {
+                i= R.drawable.fauteuille3
+              }
+            "Fauteuil trois places" -> {
+                i= R.drawable.fauteuille1
+
+            }
+            "Table" -> {
+                i= R.drawable.table
+
+            }
+            "Thor" -> {
+                i= R.drawable.thor
+
+            }
+            "Fauteuil simple" -> {
+                i= R.drawable.thor
+            }
+            "Salon" -> {
+                i= R.drawable.thor
+            }
+            "Lit une place" -> {
+                i= R.drawable.thor
+            }
+            "Etagère" -> {
+                i= R.drawable.thor
+            }
+            "Commande" -> {
+                i= R.drawable.thor
+            }
+            "Cuisine" -> {
+                i= R.drawable.thor
+            }
+
+            else -> i= R.drawable.thor
+        }
+        return i
+    }
 }
