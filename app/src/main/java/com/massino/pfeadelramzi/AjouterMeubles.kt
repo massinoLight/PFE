@@ -35,7 +35,7 @@ class AjouterMeubles : AppCompatActivity(), AdapterView.OnItemSelectedListener{
 
 
           //  var databaseref = firebaseDatabase.getReference("MeubleDB").child(nomUI)
-            var databaseref = firebaseDatabase.getReference(nomUI)
+            var databaseref = firebaseDatabase.getReference("Meuble").child(nomUI)
 
             if ( nomUI != null || !TextUtils.isEmpty(prixUI.toString()) || !TextUtils.isEmpty(stockUI.toString())){
                 var meuble = Meuble(getImRess(nomUI),nomUI,prixUI,stockUI)

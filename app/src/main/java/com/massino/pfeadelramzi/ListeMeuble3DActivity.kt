@@ -18,7 +18,7 @@ class ListeMeuble3DActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_liste_meuble3_d)
-        mdatabase = FirebaseDatabase.getInstance().reference
+        mdatabase = FirebaseDatabase.getInstance().reference.child("Meuble")
         mdatabase!!.addValueEventListener(object : ValueEventListener {
                // solution provisoir
                override fun onDataChange(snapshot: DataSnapshot) {
