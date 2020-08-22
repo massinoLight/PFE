@@ -13,7 +13,6 @@ import kotlinx.android.synthetic.main.activity_ajouter_meubles.*
 
 class AjouterMeubles : AppCompatActivity(), AdapterView.OnItemSelectedListener{
 
-  //  var mDatabase: DatabaseReference?=null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ajouter_meubles)
@@ -28,14 +27,12 @@ class AjouterMeubles : AppCompatActivity(), AdapterView.OnItemSelectedListener{
           adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
           spinner.adapter=adapter
       }
-      spinner.onItemSelectedListener
-
-
 
         button4.setOnClickListener{
             var nomUI = spinner.selectedItem.toString()
             var prixUI = textView2.text.toString().toInt()
             var stockUI=  textView3.text.toString().toInt()
+
 
           //  var databaseref = firebaseDatabase.getReference("MeubleDB").child(nomUI)
             var databaseref = firebaseDatabase.getReference(nomUI)

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/custom_menu_backg"
+    tools:context="com.massino.pfeadelramzi.FaireCommandeActivity">
+
+    <EditText
+        android:id="@+id/quantité"
+        android:layout_width="404dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="20dp"
+        android:background="#928DAB"
+        android:hint="Quantité souhaitée"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:inputType="number"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/prixaffiché"
+        tools:layout_editor_absoluteX="3dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/prixaffiché"
+        android:layout_width="404dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="20dp"
+        android:background="#928DAB"
+        android:hint="Prix"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/spinner2_nom"
+        tools:layout_editor_absoluteX="3dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/passercom"
+
+        android:layout_width="200dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="44dp"
+        android:backgroundTint="#928DAB"
+        android:gravity="center"
+        android:text="Commander"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quantité"
+        app:layout_constraintVertical_bias="0.203"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinner2_nom"
+        android:layout_width="404dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="220dp"
+        android:background="#928DAB"
+        android:backgroundTint="#928DAB"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:spinnerMode="dropdown"
+        android:autofillHints="Selectionner un meuble"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>

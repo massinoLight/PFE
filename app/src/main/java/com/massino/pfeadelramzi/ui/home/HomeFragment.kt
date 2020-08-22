@@ -1,21 +1,14 @@
 package com.massino.pfeadelramzi.ui.home
 
-import android.content.ContentValues
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import com.massino.pfeadelramzi.AjouterMeubles
-import com.massino.pfeadelramzi.ListeMeuble3DActivity
-import com.massino.pfeadelramzi.MainActivity
-import com.massino.pfeadelramzi.R
+import com.massino.pfeadelramzi.*
 import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment() {
@@ -32,15 +25,20 @@ class HomeFragment : Fragment() {
         val root = inflater.inflate(R.layout.fragment_home, container, false)
         val lesmeubles3d: Button = root.findViewById(R.id.button2)
 
+
+
+
+
+        val passs:Button=root.findViewById(R.id.bupasscomd)
         lesmeubles3d.setOnClickListener {
             val intent2 = Intent(getActivity(), ListeMeuble3DActivity::class.java)
             startActivity(intent2)
         }
-        // essaie
-        /*ajout.setOnClickListener{
-            val intent5= Intent(getActivity(), AjouterMeubles::class.java)
-            startActivity(intent5)
-        }*/
+        // passer une commande
+        passs.setOnClickListener{
+            val intentcom= Intent(getActivity(), FaireCommandeActivity::class.java)
+            startActivity(intentcom)
+        }
 
 
         return root
