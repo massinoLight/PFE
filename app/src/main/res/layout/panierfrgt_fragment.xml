@@ -3,14 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.massino.pfeadelramzi.ui.notez.Noteznimportequoi">
-
+    tools:context="com.massino.pfeadelramzi.ui.Panierfrgt.Panierfrgt">
 
     <Button
-        android:id="@+id/getRating"
+        android:id="@+id/buPanier"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Get Rating "
-        />
+        android:text="Panier" />
 
 </FrameLayout>

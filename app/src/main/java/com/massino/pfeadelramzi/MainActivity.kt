@@ -40,6 +40,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu_principal)
         setSupportActionBar(toolbar)
+
+
+
         signInButton.setOnClickListener {
             createSignInIntent()
         }
@@ -91,6 +94,7 @@ class MainActivity : AppCompatActivity() {
                         startActivity(intent2)
                         finish()
                     }else{
+
                         val intent3 = Intent(this, MenuPrincipalGerant::class.java)
                         intent3.putExtra(EXTRA_EMAIL, user.email)
                         intent3.putExtra(EXTRA_NOM, user.displayName)

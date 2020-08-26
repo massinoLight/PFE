@@ -19,17 +19,21 @@ RecyclerView.Adapter<CmndGerantAdapter.ExampleViewHolder>(){
     }
     override fun onBindViewHolder(holder: ExampleViewHolder, position: Int) {
         val currentItem = exampleliste[position]
-        holder.CGNomMeuble.text = currentItem.article
-        holder.CGQuantite.text = currentItem.quantite.toString()
-        holder.CGDate.text = currentItem.date
-        holder.CGUtilisateur.text = currentItem.utlisateur
-        holder.CGAdresseMail.text = currentItem.mailUtilisateur
-        holder.CGAdresse.text = currentItem.adresse
+
+            holder.CGNomMeuble.text = currentItem.article
+            holder.CGQuantite.text = currentItem.quantite.toString()
+            holder.CGDate.text = currentItem.date
+            holder.CGUtilisateur.text = currentItem.utlisateur
+            holder.CGAdresseMail.text = currentItem.mailUtilisateur
+            holder.CGAdresse.text = currentItem.adresse
+            holder.bind(exampleliste[position],listener)
+
+
+
 
        // holder.imageView.setImageResource(currentItem.imageResource)
 
         //le meuble a afficher
-        holder.bind(exampleliste[position],listener)
     }
     override fun getItemCount() = exampleliste.size
     class ExampleViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

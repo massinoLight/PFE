@@ -19,7 +19,6 @@ class CheckCommandeGerant : AppCompatActivity() {
             // solution provisoir
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists()&& snapshot.hasChildren()){
-
                     listComman= snapshot.children.map {it.getValue(Commande::class.java)!! }
 
                 }

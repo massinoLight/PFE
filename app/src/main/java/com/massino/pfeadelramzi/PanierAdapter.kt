@@ -1,5 +1,6 @@
 package com.massino.pfeadelramzi
 
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,28 +9,34 @@ import androidx.recyclerview.widget.RecyclerView
 import com.massino.pfeadelramzi.models.Commande
 import kotlinx.android.synthetic.main.commande_enattente.view.*
 
+
+
 class PanierAdapter (private val exampleliste: Array<Commande>, val listener:(Commande)-> Unit):
     RecyclerView.Adapter<PanierAdapter.ExampleViewHolder>(){
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ExampleViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(
             R.layout.commande_enattente,
             parent, false)
+
         return ExampleViewHolder(itemView)
     }
+
     override fun onBindViewHolder(holder: ExampleViewHolder, position: Int) {
+
         val currentItem = exampleliste[position]
-        holder.CGNomMeuble.text = currentItem.article
-        holder.CGQuantite.text = currentItem.quantite.toString()
-        holder.CGDate.text = currentItem.date
-        holder.CGUtilisateur.text = currentItem.utlisateur
-        holder.CGAdresseMail.text = currentItem.mailUtilisateur
-        holder.CGAdresse.text = currentItem.adresse
+            holder.CGNomMeuble.text = currentItem.article
+            holder.CGQuantite.text = currentItem.quantite.toString()
+            holder.CGDate.text = currentItem.date
+            holder.CGUtilisateur.text = currentItem.utlisateur
+            holder.CGAdresseMail.text = currentItem.mailUtilisateur
+            holder.CGAdresse.text = currentItem.adresse
+            holder.bind(exampleliste[position],listener)
 
         // holder.imageView.setImageResource(currentItem.imageResource)
 
         //le meuble a afficher
-        holder.bind(exampleliste[position],listener)
     }
     override fun getItemCount() = exampleliste.size
     class ExampleViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

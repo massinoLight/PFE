@@ -46,8 +46,6 @@ class MenuPrincipal : AppCompatActivity(){//, NavigationView.OnNavigationItemSel
         val nomRe = intent.getStringExtra(MainActivity.EXTRA_NOM)
         val urlphoto= intent.getStringExtra(MainActivity.EXTRA_PHOTO)
 
-
-
         val fab: FloatingActionButton = findViewById(R.id.fab)
         fab.setOnClickListener { view ->
             Snackbar.make(view, "bienvenue $nomRe", Snackbar.LENGTH_LONG)
@@ -90,7 +88,7 @@ class MenuPrincipal : AppCompatActivity(){//, NavigationView.OnNavigationItemSel
         //-------------------------------------------------------------------
         val navController = findNavController(R.id.nav_host_fragment)
         appBarConfiguration = AppBarConfiguration(setOf(
-            R.id.nav_home, R.id.nav_gallery, R.id.nav_panier,R.id.nav_contact,R.id.nav_rate), drawerLayout)
+            R.id.nav_home, R.id.nav_gallery, R.id.panierfrgt,R.id.nav_contact,R.id.nav_rate), drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
         //nav_view.setNavigationItemSelectedListener(this)

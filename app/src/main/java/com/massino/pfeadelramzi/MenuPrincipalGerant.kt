@@ -15,11 +15,6 @@ class MenuPrincipalGerant : AppCompatActivity() {
         var firebaseDatabas= FirebaseDatabase.getInstance()
         var databaseRef = firebaseDatabas.reference
 
-       // databaseRef.
-button6.setOnClickListener{
-    val intent55=Intent(this,Panier::class.java)
-    startActivity(intent55)
-}
     }
 
     fun ajouterMeuble(view: View) {

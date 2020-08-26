@@ -94,7 +94,11 @@ class FaireCommandeActivity : AppCompatActivity() {
                 val setcommand = Commande(nommselected,emailc!!,nompersonne!!,quantm.toInt(),formatted,adressc,prixm.toInt())
 
                 var databaseref = FirebaseDatabase.getInstance().getReference("commande").child(formatted)
+                // pour le user
+                var databaserefclient = FirebaseDatabase.getInstance().getReference(nompersonne).child(formatted)
+
                 databaseref.setValue(setcommand)
+                databaserefclient.setValue(setcommand)
             }else{
                 Toast.makeText(this,"Veuillez remplir les champs vide",Toast.LENGTH_LONG).show()
             }
