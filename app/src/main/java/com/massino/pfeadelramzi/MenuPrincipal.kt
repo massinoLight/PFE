@@ -4,7 +4,6 @@ package com.massino.pfeadelramzi
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import android.content.ContentValues
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
@@ -16,26 +15,18 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Button
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
-import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import com.firebase.ui.auth.AuthUI
-import com.firebase.ui.auth.ui.email.CheckEmailFragment.newInstance
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
-import com.massino.pfeadelramzi.ui.home.HomeFragment
 import de.hdodenhof.circleimageview.CircleImageView
-import kotlinx.android.synthetic.main.activity_main.*
-import org.jetbrains.anko.toast
-import java.lang.reflect.Array.newInstance
 import java.net.URL
-import javax.xml.xpath.XPathFactory.newInstance
 
 class MenuPrincipal : AppCompatActivity(){//, NavigationView.OnNavigationItemSelectedListener  {
 
@@ -99,7 +90,7 @@ class MenuPrincipal : AppCompatActivity(){//, NavigationView.OnNavigationItemSel
         //-------------------------------------------------------------------
         val navController = findNavController(R.id.nav_host_fragment)
         appBarConfiguration = AppBarConfiguration(setOf(
-            R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow), drawerLayout)
+            R.id.nav_home, R.id.nav_gallery, R.id.nav_panier,R.id.nav_contact,R.id.nav_rate), drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
         //nav_view.setNavigationItemSelectedListener(this)

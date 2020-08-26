@@ -18,6 +18,9 @@ import com.massino.pfeadelramzi.models.Meuble
 import kotlinx.android.synthetic.main.ui_faire_commande.*
 import org.jetbrains.anko.sp
 import java.time.LocalDate
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
+import java.time.format.FormatStyle
 import java.util.*
 import kotlin.concurrent.thread
 
@@ -73,20 +76,29 @@ class FaireCommandeActivity : AppCompatActivity() {
 
         }
         passercom.setOnClickListener{
+
             var nommselected= spinner.selectedItem.toString()
-          //  var prixm = prixaffiché.text.toString().split(" Da").toString()//prix meuble
-           var prixm= "5"
+           var prixm = prixaffiché.text.toString().split(" Da").joinToString("")
+        // var prixm= "5"//prix meuble
             var quantm= quantité.text.toString() // quantité souhaitée
             val user = FirebaseAuth.getInstance().currentUser // pointer user
             val emailc= user!!.email // email user
             var nompersonne= user.displayName // nom user
-            var date = LocalDate.now() // date de la commande
-            val adressc:String="lol" // adresse de l'user
+            var date = LocalDateTime.now() // date de la commande
+            val formatter = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM)
+            val formatted = date.format(formatter)
+            Toast.makeText(this,formatted,Toast.LENGTH_LONG).show()
 
-            val setcommand = Commande(emailc!!,nompersonne!!,quantm.toInt(),date.toString(),adressc,prixm.toInt())
+            val adressc = adressL.text.toString() // adresse de livraison
+            if (quantm !="" && adressc != "" ){
+                val setcommand = Commande(nommselected,emailc!!,nompersonne!!,quantm.toInt(),formatted,adressc,prixm.toInt())
 
-            var databaseref = FirebaseDatabase.getInstance().getReference("commande")
-            databaseref.setValue(setcommand)
+                var databaseref = FirebaseDatabase.getInstance().getReference("commande").child(formatted)
+                databaseref.setValue(setcommand)
+            }else{
+                Toast.makeText(this,"Veuillez remplir les champs vide",Toast.LENGTH_LONG).show()
+            }
+
 
 
         }

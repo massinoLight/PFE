@@ -25,15 +25,12 @@ class HomeFragment : Fragment() {
         val root = inflater.inflate(R.layout.fragment_home, container, false)
         val lesmeubles3d: Button = root.findViewById(R.id.button2)
 
-
-
-
-
-        val passs:Button=root.findViewById(R.id.bupasscomd)
         lesmeubles3d.setOnClickListener {
             val intent2 = Intent(getActivity(), ListeMeuble3DActivity::class.java)
             startActivity(intent2)
         }
+        val passs:Button=root.findViewById(R.id.bupasscomd)
+
         // passer une commande
         passs.setOnClickListener{
             val intentcom= Intent(getActivity(), FaireCommandeActivity::class.java)

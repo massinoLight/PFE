@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.google.firebase.database.FirebaseDatabase
+import kotlinx.android.synthetic.main.activity_menu_principal_gerant.*
 import java.lang.Exception
 
 class MenuPrincipalGerant : AppCompatActivity() {
@@ -15,7 +16,10 @@ class MenuPrincipalGerant : AppCompatActivity() {
         var databaseRef = firebaseDatabas.reference
 
        // databaseRef.
-
+button6.setOnClickListener{
+    val intent55=Intent(this,Panier::class.java)
+    startActivity(intent55)
+}
     }
 
     fun ajouterMeuble(view: View) {
@@ -34,4 +38,11 @@ class MenuPrincipalGerant : AppCompatActivity() {
 
 
     }
+
+    fun checkCommande(view: View) {
+        val intent6= Intent(this,CheckCommandeGerant::class.java)
+        startActivity(intent6)
+        finish()
+    }
+
 }

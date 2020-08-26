@@ -23,12 +23,12 @@
         android:roundIcon="@mipmap/ic_logo_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FaireCommandeActivity"></activity>
-        <activity android:name=".TestBDD" />
+        <activity android:name=".Panier"></activity>
+        <activity android:name=".CheckCommandeGerant" />
+        <activity android:name=".FaireCommandeActivity" />
         <activity android:name=".Critiques" />
         <activity android:name=".AjouterMeubles" />
         <activity android:name=".MenuPrincipalGerant" />
-        <activity android:name=".SceneformeActivity" />
         <activity android:name=".SceneformKot" />
         <activity android:name=".ListeMeuble3DActivity" />
         <activity android:name=".MapsActivity" />

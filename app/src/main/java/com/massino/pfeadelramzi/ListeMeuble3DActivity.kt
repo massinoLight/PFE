@@ -23,6 +23,7 @@ class ListeMeuble3DActivity : AppCompatActivity() {
                // solution provisoir
                override fun onDataChange(snapshot: DataSnapshot) {
                     if (snapshot.exists()&& snapshot.hasChildren()){
+
                         listMeubles= snapshot.children.map {it.getValue(Meuble::class.java)!! }
 
                     }
