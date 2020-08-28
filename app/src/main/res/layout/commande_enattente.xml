@@ -22,7 +22,7 @@
 
             <TextView
                 android:id="@+id/CGNomMeuble"
-                android:layout_width="match_parent"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:paddingHorizontal="5dp"
                 android:layout_marginStart="8dp"
@@ -62,7 +62,7 @@
 
             <TextView
                 android:id="@+id/CGUtilisateur"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/meubleid"
                 android:layout_alignParentStart="true"
@@ -103,6 +103,18 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
                 android:text="Adresse client" />
+
+            <ImageButton
+                android:id="@+id/BUDELETE"
+                android:layout_width="26dp"
+                android:layout_height="37dp"
+                android:layout_above="@+id/CGQuantité"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="0dp"
+                android:layout_toEndOf="@+id/CGNomMeuble"
+                android:src="@drawable/icondelete" />
 
 
         </RelativeLayout>

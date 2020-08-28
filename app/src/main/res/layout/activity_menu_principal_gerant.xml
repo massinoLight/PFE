@@ -50,6 +50,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buCritiques" />
 
+    <Button
+        android:id="@+id/buSuppMeub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Consulter et supprimer"
+        android:onClick="Suppmeub"
+        app:layout_constraintBottom_toTopOf="@+id/buAjouter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.695" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

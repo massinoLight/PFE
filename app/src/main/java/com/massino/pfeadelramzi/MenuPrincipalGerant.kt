@@ -40,4 +40,10 @@ class MenuPrincipalGerant : AppCompatActivity() {
         finish()
     }
 
+    fun Suppmeub(view: View) {
+        val intent7= Intent(this,GerantConsultSupp::class.java)
+        startActivity(intent7)
+        finish()
+    }
+
 }
