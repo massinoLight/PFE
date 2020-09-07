@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/custom_backg"
     tools:context="com.massino.pfeadelramzi.ui.Panierfrgt.Panierfrgt">
 
-    <Button
+    <ImageView
         android:id="@+id/buPanier"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Panier" />
+        android:layout_width="285dp"
+        android:layout_height="302dp"
+        android:src="@drawable/icons8_shopping_cartbuying_100"
+        android:text="Panier"
+        android:background="@drawable/borderimageview"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

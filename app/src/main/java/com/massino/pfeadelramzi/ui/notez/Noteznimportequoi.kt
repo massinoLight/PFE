@@ -4,10 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.RatingBar
+import android.widget.*
 import android.widget.RatingBar.OnRatingBarChangeListener
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.google.firebase.database.*
 import com.massino.pfeadelramzi.R
@@ -25,7 +23,7 @@ class Noteznimportequoi : Fragment() {
         val root = inflater.inflate(R.layout.noteznimportequoi_fragment, container, false)
 
         val ratingBar: RatingBar = root.findViewById(R.id.ratingBar)
-        val setrating: Button = root.findViewById(R.id.setrating)
+        val setrating: ImageView = root.findViewById(R.id.setrating)
 
         mdatabase = FirebaseDatabase.getInstance().reference.child("Rating")
         setrating.setOnClickListener{

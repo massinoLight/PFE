@@ -8,6 +8,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageButton
+import android.widget.ImageView
 import com.massino.pfeadelramzi.MainActivity
 import com.massino.pfeadelramzi.Panier
 
@@ -20,7 +22,7 @@ class Panierfrgt : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val root = inflater.inflate(R.layout.panierfrgt_fragment, container, false)
-        val panierbu: Button = root.findViewById(R.id.buPanier)
+        val panierbu: ImageView = root.findViewById(R.id.buPanier)
 
         panierbu.setOnClickListener {
             val intent2 = Intent(getActivity(), Panier::class.java)

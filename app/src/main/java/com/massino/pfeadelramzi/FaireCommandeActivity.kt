@@ -86,10 +86,11 @@ class FaireCommandeActivity : AppCompatActivity() {
             var nompersonne= user.displayName // nom user
             var date = LocalDateTime.now() // date de la commande
             val formatter = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM)
-            val formatted = date.format(formatter)
+            var formatted = date.format(formatter)
             Toast.makeText(this,formatted,Toast.LENGTH_LONG).show()
 
             val adressc = adressL.text.toString() // adresse de livraison
+            formatted = formatted.replace(".","")
             if (quantm !="" && adressc != "" ){
                 val setcommand = Commande(nommselected,emailc!!,nompersonne!!,quantm.toInt(),formatted,adressc,prixm.toInt())
 

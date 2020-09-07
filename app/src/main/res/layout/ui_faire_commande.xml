@@ -12,7 +12,7 @@
         android:layout_width="404dp"
         android:layout_height="73dp"
         android:layout_marginTop="20dp"
-        android:background="#928DAB"
+        android:background="@drawable/borderimageview"
         android:hint="Quantité souhaitée"
         android:textAlignment="center"
         android:gravity="center"
@@ -28,7 +28,7 @@
         android:layout_width="404dp"
         android:layout_height="73dp"
         android:layout_marginTop="20dp"
-        android:background="#928DAB"
+        android:background="@drawable/borderimageview"
         android:hint="Prix"
         android:textStyle="bold"
         android:textSize="20dp"
@@ -37,19 +37,21 @@
         tools:layout_editor_absoluteX="3dp"
         tools:ignore="MissingConstraints" />
 
-    <Button
+    <ImageView
         android:id="@+id/passercom"
-
-        android:layout_width="200dp"
-        android:layout_height="73dp"
-        android:backgroundTint="#928DAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/borderimageview"
+        android:contentDescription="Commander"
         android:gravity="center"
+        android:src="@drawable/icons8_add_shopping_cart_1002"
         android:text="Commander"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button5"
+        app:layout_constraintTop_toBottomOf="@+id/adressL"
         tools:ignore="MissingConstraints" />
 
     <Spinner
@@ -58,8 +60,7 @@
         android:layout_height="73dp"
         android:layout_marginTop="104dp"
         android:autofillHints="Selectionner un meuble"
-        android:background="#928DAB"
-        android:backgroundTint="#928DAB"
+        android:background="@drawable/borderimageview"
         android:gravity="center"
         android:spinnerMode="dropdown"
         android:textAlignment="center"
@@ -75,8 +76,7 @@
         android:layout_height="73dp"
         android:layout_marginTop="20dp"
         android:hint="Adresse de livraison"
-        android:background="#928DAB"
-        android:backgroundTint="#928DAB"
+        android:background="@drawable/borderimageview"
         android:textAlignment="center"
         android:gravity="center"
         android:textStyle="bold"
@@ -85,4 +85,16 @@
         app:layout_constraintHorizontal_bias="0.526"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/quantité" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Commander"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passercom"
+        android:layout_marginTop="8dp"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

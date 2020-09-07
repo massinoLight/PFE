@@ -5,6 +5,7 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/custom_backg"
     tools:context="com.massino.pfeadelramzi.ui.notez.Noteznimportequoi">
 
 
@@ -12,20 +13,26 @@
         android:id="@+id/ratingBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:stepSize="1"
+        android:background="@drawable/borderimageview"
         app:layout_constraintBottom_toTopOf="@+id/setrating"
         app:layout_constraintEnd_toEndOf="parent"
-        android:stepSize="1"
+        app:layout_constraintHorizontal_bias="0.567"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.777" />
 
-    <Button
+    <ImageView
         android:id="@+id/setrating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="104dp"
+        android:layout_marginBottom="268dp"
+        android:background="@drawable/borderimageview"
+        android:src="@drawable/icons8_thumbs_up_1002"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

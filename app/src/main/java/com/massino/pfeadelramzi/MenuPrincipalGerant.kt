@@ -21,7 +21,7 @@ class MenuPrincipalGerant : AppCompatActivity() {
        // R.id.buAjouter
         val intent5 = Intent(this, AjouterMeubles::class.java)
         startActivity(intent5)
-        finish()
+        //finish()
     }
 
     fun RepCritiques(view: View) {
@@ -29,7 +29,7 @@ class MenuPrincipalGerant : AppCompatActivity() {
 
            val intent6= Intent(this,Critiques::class.java)
            startActivity(intent6)
-           finish()
+          // finish()
 
 
     }
@@ -37,13 +37,13 @@ class MenuPrincipalGerant : AppCompatActivity() {
     fun checkCommande(view: View) {
         val intent6= Intent(this,CheckCommandeGerant::class.java)
         startActivity(intent6)
-        finish()
+        //finish()
     }
 
     fun Suppmeub(view: View) {
         val intent7= Intent(this,GerantConsultSupp::class.java)
         startActivity(intent7)
-        finish()
+       // finish()
     }
 
 }

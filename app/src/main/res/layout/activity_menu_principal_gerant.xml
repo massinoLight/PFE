@@ -5,62 +5,146 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MenuPrincipalGerant"
-    android:background="@drawable/custom_menu_backg">
+    android:background="@drawable/custom_backg">
 
-    <Button
+    <ImageView
         android:id="@+id/buAjouter"
-        android:layout_width="match_parent"
-        android:layout_height="73dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:backgroundTint="#928DAB"
+        android:layout_width="118dp"
+        android:layout_height="115dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="48dp"
+        android:background="@drawable/borderimageview"
         android:onClick="ajouterMeuble"
+        android:src="@drawable/icons8_add_new_1002"
         android:text="Ajouter Meuble"
         android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.111"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.416" />
+        app:layout_constraintHorizontal_bias="0.648"
+        app:layout_constraintStart_toEndOf="@+id/buSuppMeub"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
-    <Button
+    <ImageView
 
         android:id="@+id/buCritiques"
-        android:layout_width="match_parent"
-        android:layout_height="73dp"
-        android:layout_marginTop="53dp"
-        android:backgroundTint="#928DAB"
+        android:layout_width="118dp"
+        android:layout_height="115dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="48dp"
+        android:background="@drawable/borderimageview"
         android:onClick="RepCritiques"
+        android:src="@drawable/icons8_combo_chart_1002"
         android:text="Critiques"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buAjouter" />
+        app:layout_constraintHorizontal_bias="0.536"
+        app:layout_constraintStart_toEndOf="@+id/checkcommande"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
-    <Button
+    <ImageView
         android:id="@+id/checkcommande"
-        android:layout_width="match_parent"
-        android:layout_height="73dp"
-        android:text="Commandes"
+        android:layout_width="118dp"
+        android:layout_height="115dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/borderimageview"
         android:onClick="checkCommande"
-        android:backgroundTint="#928DAB"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/icons8_shopping_basket_100"
+        android:text="Commandes"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buCritiques" />
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
-    <Button
-        android:id="@+id/buSuppMeub"
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Consulter et supprimer"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="8dp"
+        android:text="Commandes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkcommande"
+        app:layout_constraintVertical_bias="0.029"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/buSuppMeub"
+        android:layout_width="118dp"
+        android:layout_height="115dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="76dp"
+        android:background="@drawable/borderimageview"
         android:onClick="Suppmeub"
-        app:layout_constraintBottom_toTopOf="@+id/buAjouter"
+        android:src="@drawable/icons8_search_in_list_to_do_100"
+        android:text="Consulter et supprimer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <ImageView
+        android:id="@+id/deconnexion"
+        android:layout_width="64dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="355dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.695" />
+        app:srcCompat="@drawable/icons8_shutdown_1002" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_app" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Critiques"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.522"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/buCritiques"
+        app:layout_constraintVertical_bias="0.039" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="145dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="8dp"
+        android:text="Consulter et supprimer meuble"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buSuppMeub" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Ajouter meubles"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.410"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/buAjouter" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="40dp"
+        android:layout_height="26dp"
+        app:srcCompat="@drawable/icon3d"
+        tools:layout_editor_absoluteX="128dp"
+        tools:layout_editor_absoluteY="390dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

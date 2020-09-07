@@ -24,20 +24,20 @@
         app:menu="@menu/activity_main_drawer"
         android:background="@drawable/custom_menu_backg">
 
-        <Button
+        <ImageView
             android:id="@+id/logout"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="170dp"
             android:layout_marginTop="0dp"
-            android:background="@drawable/shapelogout"
-            android:drawableLeft="@drawable/ic_cancel"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
             android:padding="15dp"
+            android:scaleType="center"
             android:shadowColor="@android:color/transparent"
-            android:text="Se déconnecter"
-            android:layout_gravity="bottom"/>
+            android:src="@drawable/icons8_shutdown_1002"
+             />
 
 
     </com.google.android.material.navigation.NavigationView>

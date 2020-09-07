@@ -12,7 +12,7 @@
         android:layout_width="404dp"
         android:layout_height="73dp"
         android:layout_marginTop="20dp"
-        android:background="#928DAB"
+        android:background="@drawable/borderimageview"
         android:hint="Stock"
         android:gravity="center"
         android:inputType="number"
@@ -27,7 +27,7 @@
         android:layout_width="404dp"
         android:layout_height="73dp"
         android:layout_marginTop="20dp"
-        android:background="#928DAB"
+        android:background="@drawable/borderimageview"
         android:inputType="number"
         android:hint="Prix"
         android:textStyle="bold"
@@ -36,20 +36,22 @@
         app:layout_constraintTop_toBottomOf="@+id/spinner_nom"
         tools:layout_editor_absoluteX="3dp"
         tools:ignore="MissingConstraints" />
-    <Button
+
+    <ImageView
         android:id="@+id/button4"
 
-        android:layout_width="200dp"
-        android:layout_height="73dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
-        android:backgroundTint="#928DAB"
+        android:background="@drawable/borderimageview"
         android:gravity="center"
+        android:src="@drawable/icons8_checked_1002"
         android:text="Ajouter Image"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.203"
-        tools:layout_editor_absoluteX="105dp"
         tools:ignore="MissingConstraints" />
 
     <Spinner
@@ -57,8 +59,7 @@
         android:layout_width="404dp"
         android:layout_height="73dp"
         android:layout_marginTop="220dp"
-        android:background="#928DAB"
-        android:backgroundTint="#928DAB"
+        android:background="@drawable/borderimageview"
         android:gravity="center"
         android:spinnerMode="dropdown"
         android:autofillHints="Selectionner un meuble"
@@ -66,5 +67,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Ajouter Meuble"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button4"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

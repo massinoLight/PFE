@@ -15,6 +15,8 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Button
+import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
@@ -55,7 +57,7 @@ class MenuPrincipal : AppCompatActivity(){//, NavigationView.OnNavigationItemSel
         /**
          * le bouton déconnéction
          * */
-        val logout: Button = findViewById(R.id.logout)
+        val logout: ImageView = findViewById(R.id.logout)
         logout.setOnClickListener { view ->
             AuthUI.getInstance()
                 .signOut(this)
