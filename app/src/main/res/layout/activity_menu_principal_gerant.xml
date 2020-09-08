@@ -85,7 +85,7 @@
         android:layout_width="64dp"
         android:layout_height="40dp"
         android:layout_marginTop="4dp"
-        android:layout_marginStart="355dp"
+        android:layout_marginStart="348dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -142,9 +142,25 @@
         android:id="@+id/imageView4"
         android:layout_width="40dp"
         android:layout_height="26dp"
-        app:srcCompat="@drawable/icon3d"
-        tools:layout_editor_absoluteX="128dp"
-        tools:layout_editor_absoluteY="390dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/buSuppMeub"
+        app:layout_constraintEnd_toEndOf="@+id/buSuppMeub"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/buSuppMeub"
+        app:layout_constraintTop_toTopOf="@+id/buSuppMeub"
+        app:layout_constraintVertical_bias="0.887"
+        app:srcCompat="@drawable/icon3d" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="40dp"
+        android:layout_height="26dp"
+        app:layout_constraintBottom_toBottomOf="@+id/buAjouter"
+        app:layout_constraintEnd_toEndOf="@+id/buAjouter"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/buAjouter"
+        app:layout_constraintTop_toTopOf="@+id/buAjouter"
+        app:layout_constraintVertical_bias="0.887"
+        app:srcCompat="@drawable/icon3d" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

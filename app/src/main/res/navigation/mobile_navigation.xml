@@ -22,16 +22,16 @@
     <fragment
         android:id="@+id/nav_rate"
         android:name="com.massino.pfeadelramzi.ui.notez.Noteznimportequoi"
-        android:label="noteznimportequoi_fragment"
+        android:label="Nous Noter"
         tools:layout="@layout/noteznimportequoi_fragment" />
     <fragment
         android:id="@+id/nav_contact"
         android:name="com.massino.pfeadelramzi.ui.contact.Contactez_nous"
-        android:label="contactez_nous_fragment"
+        android:label="Nous Contacter"
         tools:layout="@layout/contactez_nous_fragment" />
     <fragment
         android:id="@+id/panierfrgt"
         android:name="com.massino.pfeadelramzi.ui.Panierfrgt.Panierfrgt"
-        android:label="panierfrgt_fragment"
+        android:label="Panier"
         tools:layout="@layout/panierfrgt_fragment" />
 </navigation>

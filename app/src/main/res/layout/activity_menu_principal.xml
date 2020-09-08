@@ -12,11 +12,9 @@
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/profile_image"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="164dp"
-        android:src="@drawable/capturelogo"
-        app:civ_border_color="#FF000000"
-        app:civ_border_width="2dp"
+        android:src="@drawable/logo_app"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.537"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,14 +25,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="133dp"
-        android:layout_marginBottom="148dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="100dp"
         android:background="@drawable/borderimageview"
         android:padding="15dp"
         android:shadowColor="@android:color/transparent"
         android:src="@drawable/icons8_female_user_1002"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profile_image" />
 
@@ -44,17 +40,42 @@
         android:layout_height="wrap_content"
 
         android:layout_marginStart="23dp"
-        android:layout_marginTop="133dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="60dp"
-        android:layout_marginBottom="148dp"
         android:background="@drawable/borderimageview"
         android:padding="15dp"
         android:shadowColor="@android:color/transparent"
         android:src="@drawable/icons8_add_user_male_1002"
         android:text="S'enregister"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/signInButton"
         app:layout_constraintTop_toBottomOf="@+id/profile_image" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="75dp"
+        android:text="Se connecter"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signInButton"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="S'enregistrer"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginLeft="75dp"
+        app:layout_constraintStart_toEndOf="@+id/textView13"
+        app:layout_constraintTop_toBottomOf="@+id/signUp"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
