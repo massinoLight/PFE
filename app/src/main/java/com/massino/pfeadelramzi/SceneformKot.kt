@@ -321,7 +321,7 @@ class SceneformKot : AppCompatActivity() {
             }
             "Salon" -> {
                 val andy = ImageView(this)
-                andy.setImageResource(R.drawable.thor)
+                andy.setImageResource(R.drawable.salon_im)
                 andy.contentDescription = "Salon"
 
                     placeObject(arFragment,anchor,Uri.parse("new2.sfb"))
@@ -340,7 +340,7 @@ class SceneformKot : AppCompatActivity() {
             }
             "Etagère" -> {
                 val andy = ImageView(this)
-                andy.setImageResource(R.drawable.thor)
+                andy.setImageResource(R.drawable.etag_im)
                 andy.contentDescription = "Etagère"
 
                     placeObject(arFragment,anchor,Uri.parse("deco.sfb"))

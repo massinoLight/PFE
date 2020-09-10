@@ -1,14 +1,17 @@
 package com.massino.pfeadelramzi
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.*
 import com.massino.pfeadelramzi.models.Commande
+import de.hdodenhof.circleimageview.CircleImageView
 import kotlinx.android.synthetic.main.commande_enattente.view.*
 
 class CmndGerantAdapter (private val exampleliste: Array<Commande>, val listener:(Commande)-> Unit):
@@ -25,11 +28,14 @@ RecyclerView.Adapter<CmndGerantAdapter.ExampleViewHolder>(){
         val currentItem = exampleliste[position]
 
             holder.CGNomMeuble.text = currentItem.article
-            holder.CGQuantite.text = currentItem.quantite.toString()
+            holder.CGQuantite.text = "Quantité: "+currentItem.quantite.toString()
             holder.CGDate.text = currentItem.date
             holder.CGUtilisateur.text = currentItem.utlisateur
             holder.CGAdresseMail.text = currentItem.mailUtilisateur
-            holder.CGAdresse.text = currentItem.adresse
+            holder.CGAdresse.text = "Adresse: "+currentItem.adresse
+            holder.imag.setImageResource(getImRess(currentItem.article))
+
+
             holder.bind(exampleliste[position],listener)
 
 
@@ -87,7 +93,58 @@ RecyclerView.Adapter<CmndGerantAdapter.ExampleViewHolder>(){
         val CGUtilisateur: TextView = itemView.CGUtilisateur
         val CGAdresseMail: TextView = itemView.CGAdresseMail
         val CGAdresse: TextView = itemView.CGAdresse
+        var imag: ImageView = itemView.meubleid
 
+    }
+    private fun getImRess (meub_name:String):Int{
+        var i:Int
+        when (meub_name) {
+            "Fauteuil Gris" -> {
+                i= R.drawable.fauteilgris
+            }
+            "Banc" -> {
+                i= R.drawable.banc
+            }
+            "Bureau" -> {
+                i= R.drawable.burau
+            }
+            "Fauteuil une place" -> {
+                i= R.drawable.fauteuille3
+            }
+            "Fauteuil trois places" -> {
+                i= R.drawable.fauteuille1
+
+            }
+            "Table" -> {
+                i= R.drawable.table
+
+            }
+            "Thor" -> {
+                i= R.drawable.thor
+
+            }
+            "Fauteuil simple" -> {
+                i= R.drawable.thor
+            }
+            "Salon" -> {
+                i= R.drawable.salon_im
+            }
+            "Lit une place" -> {
+                i= R.drawable.thor
+            }
+            "Etagère" -> {
+                i= R.drawable.etag_im
+            }
+            "Commande" -> {
+                i= R.drawable.thor
+            }
+            "Cuisine" -> {
+                i= R.drawable.thor
+            }
+
+            else -> i= R.drawable.thor
+        }
+        return i
     }
 
 

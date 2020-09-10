@@ -63,7 +63,7 @@ class AjouterMeubles : AppCompatActivity(), AdapterView.OnItemSelectedListener{
     private fun getImRess (meub_name:String):Int{
         var i:Int
         when (meub_name) {
-            "Fauteuil gris" -> {
+            "Fauteuil Gris" -> {
                 i= R.drawable.fauteilgris
             }
             "Banc" -> {
@@ -91,13 +91,13 @@ class AjouterMeubles : AppCompatActivity(), AdapterView.OnItemSelectedListener{
                 i= R.drawable.thor
             }
             "Salon" -> {
-                i= R.drawable.thor
+                i= R.drawable.salon_im
             }
             "Lit une place" -> {
                 i= R.drawable.thor
             }
             "Etagère" -> {
-                i= R.drawable.thor
+                i= R.drawable.etag_im
             }
             "Commande" -> {
                 i= R.drawable.thor

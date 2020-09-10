@@ -80,6 +80,7 @@ class FaireCommandeActivity : AppCompatActivity() {
             var nommselected= spinner.selectedItem.toString()
            var prixm = prixaffiché.text.toString().split(" Da").joinToString("")
         // var prixm= "5"//prix meuble
+          //  val imagmeuble=getImRess(nommselected)
             var quantm= quantité.text.toString() // quantité souhaitée
             val user = FirebaseAuth.getInstance().currentUser // pointer user
             val emailc= user!!.email // email user
@@ -108,7 +109,6 @@ class FaireCommandeActivity : AppCompatActivity() {
 
         }
     }
-
 
 
 
