@@ -13,26 +13,43 @@
         android:id="@+id/ratingBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:stepSize="1"
+        android:layout_marginTop="228dp"
         android:background="@drawable/borderimageview"
-        app:layout_constraintBottom_toTopOf="@+id/setrating"
+        android:stepSize="1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.567"
+        app:layout_constraintHorizontal_bias="0.526"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.777" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/setrating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="268dp"
+        android:layout_marginBottom="64dp"
         android:background="@drawable/borderimageview"
         android:src="@drawable/icons8_thumbs_up_1002"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.533"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_avisclient" />
+
+    <EditText
+        android:id="@+id/et_avisclient"
+        android:layout_width="358dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/borderimageview"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Exprimez votre avis"
+        android:inputType="text"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
