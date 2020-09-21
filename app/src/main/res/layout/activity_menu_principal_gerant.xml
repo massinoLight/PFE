@@ -81,11 +81,12 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <ImageView
-        android:id="@+id/deconnexion"
+        android:id="@+id/deconnexionG"
         android:layout_width="64dp"
         android:layout_height="40dp"
         android:layout_marginTop="4dp"
         android:layout_marginStart="348dp"
+        android:onClick="deconnexionGerant"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
